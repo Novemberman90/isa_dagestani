@@ -1,0 +1,94 @@
+@use 'importer' as *;
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  @include Rubik-400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color:$dark-blue;
+  position: relative;
+  &.lock {
+    overflow: hidden;
+  }
+}
+a {
+  color: inherit;
+}
+.main {
+  flex-grow: 1;
+}
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  &--style {
+    padding: 0 20px;
+  }
+}
+.container-xl {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.pretitle-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  width: fit-content;
+  &__pretitle-title {
+  @include Rubik-400;
+    font-size: 18px;
+  }
+}
+.accent-text {
+  color: $blue;
+}
+@media (max-width: 1298px) {
+  .container {
+    &--style {
+     padding: 0 20px;
+   }
+  }
+}
+@media (max-width: 1190px) {
+  .container {
+    padding: 0 30px;
+    &--style {
+     padding: 0 20px;
+   }
+  }
+  .container-xl {
+    padding: 0 20px;
+  }
+}
+.title {
+  font-size: 40px;
+  @include Rubik-600;
+  text-transform: capitalize;
+}
+@media (max-width: 578px) {
+  .title {
+  @include Rubik-500;
+ }
+ .pretitle-box {
+   &__pretitle-title {
+     @include Rubik-400;
+   }
+ }
+}
+@media (max-width: 395px) {
+  .title {
+  font-size: 30px; 
+ }
+}
