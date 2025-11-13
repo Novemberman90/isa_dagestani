@@ -10,11 +10,11 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  @include Rubik-400;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color:$dark-blue;
+  @include Gordita-400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  color:$grey-text;
   position: relative;
   &.lock {
     overflow: hidden;
@@ -27,68 +27,49 @@ a {
   flex-grow: 1;
 }
 .container {
-  max-width: 1280px;
-  padding: 0 40px;
-  margin: 0 auto;
-  &--style {
-    padding: 0 20px;
-  }
-}
-.container-xl {
-  max-width: 1440px;
-  padding: 0 40px;
+  max-width: 1540px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
-.pretitle-box {
+#instagram {
+  path.inst-bg {
+    fill: #393939;
+  }
+  path.inst-fg {
+    fill: $white-400;
+  }
+}
+.icon {
+  path.arrow {
+    stroke: $white-400;
+  }
+}
+.social-list {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 5px 20px;
-  width: fit-content;
-  &__pretitle-title {
-  @include Rubik-400;
-    font-size: 18px;
+  gap: 25px;
+}
+.contact-us {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: $dark-700;
+  @include Gordita-500;
+  &__title {
+    border-radius: 50px;
+    padding: 20px 45px;
+    border-radius: 47px;
+    background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
   }
-}
-.accent-text {
-  color: $blue;
-}
-@media (max-width: 1298px) {
-  .container {
-    &--style {
-     padding: 0 20px;
-   }
+  &__img {
+    padding: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 51px;
+    background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
   }
-}
-@media (max-width: 1190px) {
-  .container {
-    padding: 0 30px;
-    &--style {
-     padding: 0 20px;
-   }
-  }
-  .container-xl {
-    padding: 0 20px;
-  }
-}
-.title {
-  font-size: 40px;
-  @include Rubik-600;
-  text-transform: capitalize;
-}
-@media (max-width: 578px) {
-  .title {
-  @include Rubik-500;
- }
- .pretitle-box {
-   &__pretitle-title {
-     @include Rubik-400;
-   }
- }
-}
-@media (max-width: 395px) {
-  .title {
-  font-size: 30px; 
- }
 }

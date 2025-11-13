@@ -1,28 +1,37 @@
 
 @font-face {
-  font-family: 'Rubik-Regular';
+  font-family: 'Gordita-Regular';
   font-weight: 400;
   font-style: normal;
-  src: local('Rubik-Regular'),
-    url('../fonts/Rubik-Regular.woff2') format('woff2'),
-    url('../fonts/Rubik-Regular.woff') format('woff');
+  src: local('Gordita-Regular'),
+    url('../fonts/Gordita-Regular.woff2') format('woff2'),
+    url('../fonts/Gordita-Regular.woff') format('woff');
   font-display: swap;
 }
 @font-face {
-  font-family: 'Rubik-Medium';
+  font-family: 'Gordita-Medium';
   font-weight: 500;
   font-style: normal;
-  src: local('Rubik-Medium'),
-    url('../fonts/Rubik-Medium.woff2') format('woff2'),
-    url('../fonts/Rubik-Medium.woff') format('woff');
+  src: local('Gordita-Medium'),
+    url('../fonts/Gordita-Medium.woff2') format('woff2'),
+    url('../fonts/Gordita-Medium.woff') format('woff');
   font-display: swap;
 }
 @font-face {
-  font-family: 'Rubik-SemiBold';
-  font-weight: 600;
+  font-family: 'Goldman-Bold';
+  font-weight: 700;
   font-style: normal;
-  src: local('Rubik-SemiBold'),
-    url('../fonts/Rubik-SemiBold.woff2') format('woff2'),
-    url('../fonts/Rubik-SemiBold.woff') format('woff');
+  src: local('Goldman-Bold'),
+    url('../fonts/Goldman-Bold.woff2') format('woff2'),
+    url('../fonts/Goldman-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Goldman-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Goldman-Regular'),
+    url('../fonts/Goldman-Regular.woff2') format('woff2'),
+    url('../fonts/Goldman-Regular.woff') format('woff');
   font-display: swap;
 }

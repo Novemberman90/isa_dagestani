@@ -1,30 +1,43 @@
-$semi-white: #f0f0f5;
-$dark-blue: #232d55;
-$grey: #64738c;
-$blue:#5d98d8;
-$white: #fff;
+$white-400: #FFFFFF;
+$grey-400: rgba(255, 255, 255, 0.48);
+$accent: #F7CF84;
+$accent-bold: #DFA841;
+$accent-2: #FFEFCA;
+$dark-400: #2A2A2A;
+$dark-300: #2C2C2C;
+$dark-700: #222222;
+$dark-800: #1A1A1A;
+$grey-text: #636363;
+$grey-text-2: #979797;
+$accent-text: #E0A828;
+$accent-logo: #FCDA8D;
 
-%Muli-900 {
-  font-family: 'Muli-Black';
-  font-weight: 900;
-}
-
-@mixin Muli-700 {
-  font-family: "Muli", sans-serif;
+%Goldman-700 {
+  font-family: 'Goldman-Bold';
   font-weight: 700;
 }
-@mixin Rubik-400 {
-  font-family: "Rubik-Regular", sans-serif;
+%Gordita-400 {
+  font-family: 'Gordita-Regular';
   font-weight: 400;
 }
-@mixin Rubik-500 {
-  font-family: "Rubik-Medium", sans-serif;
+
+@mixin Goldman-700 {
+  font-family: "Goldman-Bold", sans-serif;
+  font-weight: 700;
+}
+@mixin Goldman-400 {
+  font-family: "Goldman-Regular", sans-serif;
+  font-weight: 400;
+}
+@mixin Gordita-400  {
+  font-family: "Gordita-Regular", sans-serif;
+  font-weight: 400;
+}
+@mixin Gordita-500  {
+  font-family: "Gordita-Medium", sans-serif;
   font-weight: 500;
 }
-@mixin Rubik-600 {
-  font-family: "Rubik-Bold", sans-serif;
-  font-weight: 600;
-}
+
 
 
 
