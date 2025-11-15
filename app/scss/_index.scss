@@ -15,15 +15,12 @@
   }
   &__item {
     padding: 10px 0;
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
   &__question {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
     gap: 10px;
     padding: 10px 0;
     cursor: pointer;
@@ -32,6 +29,24 @@
     @include Gordita-400;
     color: $white-400;
     border: none;
+    transform: all .3s;
+    &:hover {
+      .faq__question-label {
+        color: $accent-bold;
+      }
+      .faq__question-icon {
+        background: linear-gradient(180.00deg, rgba(246.41827392578125, 171.1123504638672, 45.01872253417969, 1), rgba(251.32211303710938, 195.81973266601562, 93.03751373291016, 1) 100%);
+      }
+    }
+    &:active {
+     .faq__question-label {
+        opacity: .7;
+      }
+      .faq__question-icon {
+       box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+       background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
+      }
+    }
   }
   &__question-label {
     text-align: left;
@@ -39,21 +54,42 @@
   &__answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s ease;
+    transition: max-height .3s;
     &.open {
-      margin-top: 10px;
+     height: fit-content;
+     transition: all .3s;
     }
   }
   &__answer-txt {
-    padding-top: 15px;
     color: $white-400;
     line-height: 1.2;
    p {
-    margin-bottom: 10px;
+    margin-top: 10px;
     &:last-child {
       margin-bottom: 0;
     }
    }
+  }
+  &__question-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    padding: 13px;
+    background-color: $accent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      transition: all .3s;
+      transform: rotate(45deg);
+    }
+    &--open {
+      background-color: $white-400;
+      .icon {
+        transition: all .3s;
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
 html[dir="rtl"] .faq__question {

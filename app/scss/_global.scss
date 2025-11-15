@@ -108,3 +108,13 @@ a {
     padding: 0 20px;
   }
  }
+ .btn {
+  background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
+  &:hover {
+    background: linear-gradient(180.00deg, rgba(246.41827392578125, 171.1123504638672, 45.01872253417969, 1), rgba(251.32211303710938, 195.81973266601562, 93.03751373291016, 1) 100%);
+  }
+  &:active {
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
+  }
+ }
