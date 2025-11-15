@@ -16,6 +16,7 @@ body {
   letter-spacing: 0;
   color:$grey-text;
   position: relative;
+  background-color: $dark-700;
   &.lock {
     overflow: hidden;
   }
@@ -95,6 +96,11 @@ a {
       }
     }
    }
+ }
+ .title {
+  @include Goldman-700;
+  color: $white-400;
+  text-transform: uppercase;
  }
 
  @media (max-width: 768) {

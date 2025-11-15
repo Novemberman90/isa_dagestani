@@ -1,0 +1,72 @@
+@use 'importer' as *;
+.faq {
+  background-color: $dark-700;
+  padding: 130px 0;
+  &__title {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__accordion {
+    max-width: 695px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__item {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 24px;
+    @include Gordita-400;
+    color: $white-400;
+    border: none;
+  }
+  &__question-label {
+    text-align: left;
+  }
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    &.open {
+      margin-top: 10px;
+    }
+  }
+  &__answer-txt {
+    padding-top: 15px;
+    color: $white-400;
+    line-height: 1.2;
+   p {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+   }
+  }
+}
+html[dir="rtl"] .faq__question {
+  text-align: right;
+}
+
+@media (max-width: 440px) {
+  .faq {
+    &__question {
+      padding: 5px 0;
+    }
+    &__question-label {
+      font-size: 18px;
+    }
+  }
+}
