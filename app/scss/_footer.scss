@@ -3,7 +3,7 @@
   background-color: $dark-800;
   padding: 70px 0 56px;
   position: relative;
-  //overflow: hidden;
+  overflow: hidden;
   z-index: 0;
   &::before {
     position: absolute;
@@ -214,7 +214,7 @@
     }
     &__hero-block {
       &::before {
-        background-position: center 42%;
+        background-position: center 45%;
       }
     }
   }
@@ -223,11 +223,6 @@
 @media (max-width: 578px) {
 .footer {
   padding-bottom: 92px;
-    &__hero-block {
-      &::before {
-        background-position: center 45%;
-      }
-    }
     &__hero-img {
       top: 31%;
       max-width: 300px;
