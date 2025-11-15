@@ -32,7 +32,6 @@
     @include Gordita-400;
     color: $white-400;
     border: none;
-    transform: all .3s;
     &:hover {
       .faq__question-label {
         color: $accent-bold;
@@ -74,12 +73,13 @@
    }
   }
   &__question-icon {
-    width: 43px;
-    height: 43px;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    padding: 13px;
+    padding: 12px;
     background-color: $accent;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     .icon {

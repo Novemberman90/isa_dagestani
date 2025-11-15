@@ -1,4 +1,23 @@
 
+const MENUBTN = document.querySelector(".menu__btn");
+const MENU = document.querySelector('.menu__nav');
+
+MENUBTN.addEventListener("click", ()=>{
+  if(MENUBTN) {
+    openMenu();
+    document.body.classList.toggle('lock');
+  }
+});
+const openMenu=()=>{
+  MENU.classList.toggle('menu__nav--active');
+  MENUBTN.classList.toggle('menu__btn--active');
+}
+const closeMenu =()=>{
+  document.body.classList.remove('lock');
+  MENU.classList.remove('menu__nav--active');
+  MENUBTN.classList.remove('menu__btn--active');
+}
+
 const ACCORDEON = document.querySelectorAll("[data-accordion]");
 
 ACCORDEON.forEach(item => {
@@ -23,7 +42,7 @@ ACCORDEON.forEach(item => {
      if(!isOpen) {
       content.style.maxHeight = content.scrollHeight + "px";
       content.classList.add("open");
-      
+
       // Повернуть иконку только у текущего аккордеона
       currentIcon.classList.add("faq__question-icon--open");
      }
