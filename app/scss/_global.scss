@@ -33,7 +33,7 @@ a {
   margin: 0 auto;
 }
 
-#instagram {
+.icon {
   path.inst-bg {
     fill: #393939;
   }
@@ -117,4 +117,12 @@ a {
     box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
   }
+ }
+
+ html[dir="rtl"] .header__menu {
+   direction: rtl;
+ }
+
+ html[dir="rtl"] .header__lang {
+   direction: rtl;
  }

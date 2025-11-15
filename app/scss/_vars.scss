@@ -1,5 +1,6 @@
 $white-400: #FFFFFF;
-$grey-400: rgba(255, 255, 255, 0.48);
+$grey-400: #ffffff7a;
+$grey-500: #8F8F8F;
 $accent: #F7CF84;
 $accent-bold: #DFA841;
 $accent-2: #FFEFCA;
@@ -20,6 +21,10 @@ $accent-logo: #FCDA8D;
   font-family: 'Gordita-Regular';
   font-weight: 400;
 }
+%Inte-400 {
+  font-family: 'Inter-Regular';
+  font-weight: 400;
+}
 
 @mixin Goldman-700 {
   font-family: "Goldman-Bold", sans-serif;
@@ -36,6 +41,10 @@ $accent-logo: #FCDA8D;
 @mixin Gordita-500  {
   font-family: "Gordita-Medium", sans-serif;
   font-weight: 500;
+}
+@mixin Inter-400  {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
 }
 
 

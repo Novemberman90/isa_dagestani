@@ -1,4 +1,7 @@
 @use 'importer' as *;
+.hero  {
+  display: none;
+}
 .faq {
   background-color: $dark-700;
   padding: 130px 0;

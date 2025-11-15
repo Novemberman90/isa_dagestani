@@ -9,11 +9,109 @@
   <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
-<header class="header" id="header">
-
+<header class="header" id="header" data-i18n-section="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo" href="/" aria-label="Isa Dagestani logo">
+        <p class="logo__title">Isa</p>
+        <p class="logo__title logo__title--style">Dagestani</p>
+      </a>
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-label="Button open / close menu">
+          <span></span>
+        </button>
+        <nav class="menu__nav" aria-label="Main menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#about" class="menu__link menu__link--active" data-i18n="nav_about">About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#projects" class="menu__link" data-i18n="nav_projects">Projects</a>
+            </li>
+            <li class="menu__item">
+              <a href="#media" class="menu__link" data-i18n="nav_media">Media</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact" class="menu__link" data-i18n="nav_contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="lang">
+            <li class="lang__item">
+              <a href="#" class="lang__option lang__option--active" data-lang="en" aria-label="Switch language to English">EN</a>
+            </li>
+            <li class="lang__item">
+              <a href="#" class="lang__option" data-lang="ar" aria-label="Switch language to Arabic">AR</a>
+            </li>
+            <li class="lang__item">
+              <a href="#" class="lang__option" data-lang="ru" aria-label="Switch language to Russian">RU</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main class="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <h1 class="heto__title title">
+          <span class="heto__title-txt">Isa</span>
+          <span class="heto__title-txt heto__title-txt--style">Dagestani</span>
+        </h1>
+        <p class="hero__subtitle">A visionary building global <spas class="hero__subtitle-style">products for millions.</spas>
+        </p>
+        <a class="contact-us" href="#">
+          <p class="contact-us__title">Свяжитесь с нами</p>
+          <span class="contact-us__img">
+            <svg class="icon" width="12" height="12">
+              <use href="./images/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </a>
+        <div class="hero-card card">
+          <h2 class="hero-card__title">
+            Shaping the digital future of the <span class="hero-card__title-style">Muslim world</span>
+          </h2>
+          <p class="hero-card__descr">
+            Creating platforms powered by truth, connection and freedom.
+            My mission is to give the Ummah tools that inspire growth and unity.
+          </p>
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" width="47" height="47">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" width="47" height="47">
+                  <use href="./images/sprite.svg#x"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" width="47" height="47">
+                  <use href="./images/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" width="47" height="47">
+                  <use href="./images/sprite.svg#linkedIn"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="faq" data-i18n-section="faq">
     <div class="container">
       <h2 class="faq__title title">Faq</h2>
