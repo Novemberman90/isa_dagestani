@@ -1,22 +1,24 @@
 @use 'importer' as *;
 .footer {
   background-color: $dark-800;
-  padding: 70px 0 56px;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  &::before {
-    position: absolute;
-    content: '';
-    background-image: url('../images/content/footer-bg.svg');
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
+  &__wrapper {
+    position: relative;
+    padding: 70px 0 56px;
+    overflow: hidden;
+    z-index: 0;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/footer-bg.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
   }
   &__inner {
     display: flex;
@@ -144,10 +146,12 @@
 
 @media (max-width: 992px) {
   .footer {
-    padding: 75px 0 160px;
+    &__wrapper {
+      padding: 75px 0 160px;
       &::before {
         display: none;
       }
+    }
     &__inner {
       flex-direction: column;
       align-items: center;
@@ -205,7 +209,9 @@
 }
 @media (max-width: 768px) {
   .footer {
-    padding-bottom: 120px;
+    &__wrapper {
+      padding-bottom: 120px;
+    }
     &__social-block {
       margin-bottom: 30px;
     }
@@ -222,8 +228,10 @@
 
 @media (max-width: 578px) {
 .footer {
-  padding-bottom: 92px;
-    &__hero-img {
+  &__wrapper{
+    padding-bottom: 92px;
+  }
+  &__hero-img {
       top: 31%;
       max-width: 300px;
     }
@@ -238,15 +246,20 @@
       top: 31%;
       max-width: 250px;
     }
+    &__nav-block {
+      padding-top: 100px;
+    }
   }
 }
 @media (max-width: 385px) {
 .footer {
-  padding-bottom: 82px;
+  &__wrapper {
+    padding-bottom: 82px;
+  }
     &__hero-block {
-        &::before {
+      &::before {
         background-image: url('../images/content/footer-bg-s.svg');
-        background-position: center 140%;
+        background-position: center 115%;
         width: 100%;
       }
     }
