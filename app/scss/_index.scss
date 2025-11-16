@@ -1,7 +1,183 @@
 @use 'importer' as *;
 .hero  {
-  display: none;
+  padding: 160px 0 60px;
+  position: relative;
+  background-color: $dark-hero;
+  z-index: 0;
+  &::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(180.00deg, rgba(46, 46, 46, 1), rgba(34, 34, 34, 1) 100%);
+    width: 100%;
+    height: 88px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+  }
+  &__wrapper {
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/hero-bg-l.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left center;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/hero-bg-r.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &__content {
+    max-width: 800px;
+    width: 100%;
+    //padding-right: 65px;
+    flex: 0 0 800px;
+  }
+  &__title {
+    font-size: 108px;
+    line-height: 0.8;
+    max-width: 740px;
+    margin-bottom: 40px;
+  }
+  &__title-txt {
+    &--style {
+      color: $accent-logo;
+    }
+  }
+  &__subtitle {
+    font-size: 24px;
+    color: $white-400;
+    margin-bottom: 30px;
+  }
+  &__subtitle-style {
+    color: $accent-logo;
+  }
+  .card {
+    padding: 45px 50px;
+    border-radius: 30px;
+    position: relative;
+    background-image: url('../images/content/card-bgc.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    overflow: hidden;
+    z-index: 0;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/content/hero-card.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  
+    &__title {
+      font-size: 32px;
+      line-height: 0.8;
+      color: $dark-750;
+      margin-bottom: 10px;
+      max-width: 435px;
+    }
+  
+    &__title-txt {
+      &--style {
+        color: $accent-text;
+      }
+    }
+  
+    &__descr {
+      max-width: 340px;
+      font-size: 18px;
+      color: $grey-text;
+      margin-bottom: 15px;
+    }
+  }
+  &__about {
+    position: relative;
+    margin-top: -70px;
+    flex: 1 1 auto;
+  }
+  
+  &__about-img-wrap {
+  
+/*     &::before {
+      position: absolute;
+      content: '';
+      filter: blur(308.29998779296875px);
+      background: #2f2f2f;
+      z-index: 0;
+      top: 124px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      width: 994px;
+      height: 994px;
+    } */
+  }
+  &__about-img {
+    max-width: 596px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &__tag {
+    font-size: 24px;
+    line-height: 1;
+    color: $white-400;
+    border-radius: 30px;
+    padding: 30px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(41, 41, 41, 0.29);
+    width: fit-content;
+    position: absolute;
+    z-index: 2;
+    &.tag1 {
+      bottom: 57%;
+      right: -38px;
+    }
+    &.tag2 {
+      bottom: 42%;
+      left: -90px;
+    }
+    &.tag3 {
+      bottom: 80px;
+    }
+  }
 }
+
+
+
 .faq {
   background-color: $dark-700;
   padding: 130px 0;
@@ -99,6 +275,47 @@ html[dir="rtl"] .faq__question {
   text-align: right;
 }
 
+@media (max-width: 1400px) {
+  .hero {
+    &::after {
+      height: 60px;
+    }
+    &__inner {
+      align-items: flex-end
+    }
+    &__about {
+      margin-top: 0;
+    }
+    &__tag {
+      font-size: 18px;
+      padding: 20px;
+      &.tag1 {
+        right: 0;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+ .hero {
+  &__title {
+    font-size: 86px;
+  }
+  &__tag {
+    &.tag1 {
+      right: 0;
+      left: 0;
+      bottom: 50%;
+    }
+    &.tag2 {
+      left: 0;
+      bottom: 30%;
+    }
+    &.tag3 {
+      bottom: 40px;
+    }
+  }
+ }
+}
 @media (max-width: 440px) {
   .faq {
     padding: 100px 0;

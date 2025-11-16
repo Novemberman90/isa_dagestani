@@ -1,6 +1,10 @@
 @use 'importer' as *;
 .header {
   padding-top: 35px;
+  position: fixed;
+  inset: 0;
+  height: fit-content;
+  z-index: 30;
   &__inner {
     display: flex;
     align-items: center;
