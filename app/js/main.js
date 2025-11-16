@@ -51,8 +51,10 @@ window.addEventListener('DOMContentLoaded',()=>{
   //===== Slider ABOUT SECTION
 
     var swiper = new Swiper(".about-slider", {
-      slidesPerView: 2.5,
+      //slidesPerView: 2.5,
+      slidesPerView: 'auto',
       spaceBetween: 65,
+      //centeredSlides: true,
       navigation: {
         nextEl: ".about-slider__btn--next",
         prevEl: ".about-slider__btn--prev",

@@ -164,7 +164,9 @@
 
 .about  {
   padding: 100px 0 130px;
-  overflow-x: hidden;
+  &__inner {
+    overflow-x: hidden;
+  }
   &__pretitle {
     color: $white-400;
     position: relative;
@@ -237,20 +239,20 @@
   .swiper-slide {
     display: flex;
     height: auto;
+    width: 565px !important;
   }
 
   .card {
     display: flex;
     flex-direction: column;
     height: 268px;
+    width: 100%;
     &__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 565px;
-      width: 100%;
       height: 100%;
-      padding: 5px 0 0px 25px;
+      padding: 10px 0 0px 25px;
       border-radius: 30px;
       position: relative;
       background-image: url('../images/content/about-card-bg.svg');
@@ -284,12 +286,6 @@
       object-fit: contain;
     }
   }
-
-
-
-  .swiper-button-next {}
-
-  .swiper-button-prev {}
 }
 
 
