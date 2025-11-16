@@ -43,15 +43,20 @@
     }
   }
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: 800px auto;
+    grid-template-areas:
+      "content about"
+      "card    about";
+    column-gap: 40px;
+    row-gap: 30px;
+    align-items: center;
   }
   &__content {
     max-width: 800px;
     width: 100%;
     //padding-right: 65px;
-    flex: 0 0 800px;
+    grid-area: content;
   }
   &__title {
     font-size: 108px;
@@ -73,6 +78,9 @@
     color: $accent-logo;
   }
   .card {
+    grid-area: card;
+    max-width: 800px;
+    width: 100%;
     padding: 45px 50px;
     border-radius: 30px;
     position: relative;
@@ -118,9 +126,9 @@
     }
   }
   &__about {
+    grid-area: about;
     position: relative;
     margin-top: -70px;
-    flex: 1 1 auto;
   }
   
   &__about-img-wrap {
@@ -315,6 +323,21 @@ html[dir="rtl"] .faq__question {
     }
   }
  }
+}
+@media (max-width: 1200px) {
+  .hero {
+    &::after {
+      display: none;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    &__content {
+      flex: 1 1 auto;
+    }
+  }
 }
 @media (max-width: 440px) {
   .faq {
