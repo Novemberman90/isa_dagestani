@@ -48,6 +48,17 @@ window.addEventListener('DOMContentLoaded',()=>{
       })
   }
 
+  //===== Slider ABOUT SECTION
+
+    var swiper = new Swiper(".about-slider", {
+      slidesPerView: 2.5,
+      spaceBetween: 65,
+      navigation: {
+        nextEl: ".about-slider__btn--next",
+        prevEl: ".about-slider__btn--prev",
+      },
+    });
+
   //===== FAQ =====
   const ACCORDEON = document.querySelectorAll("[data-accordion]");
   

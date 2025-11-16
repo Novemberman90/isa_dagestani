@@ -102,6 +102,9 @@ a {
   color: $white-400;
   text-transform: uppercase;
  }
+ .accent-text {
+  color: $accent-logo;
+ }
 
  @media (max-width: 768) {
   .container {
