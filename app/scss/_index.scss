@@ -48,14 +48,12 @@
     grid-template-areas:
       "content about"
       "card    about";
-    column-gap: 40px;
-    row-gap: 30px;
-    align-items: center;
+    gap: 30px 30px;
+    align-self: center;
   }
   &__content {
     max-width: 800px;
     width: 100%;
-    //padding-right: 65px;
     grid-area: content;
   }
   &__title {
@@ -72,16 +70,18 @@
   &__subtitle {
     font-size: 24px;
     color: $white-400;
-    margin-bottom: 30px;
   }
   &__subtitle-style {
     color: $accent-logo;
   }
   .card {
     grid-area: card;
+    display: flex;
+    align-items: center;
     max-width: 800px;
     width: 100%;
-    padding: 45px 50px;
+    padding-left: 45px;
+    margin-bottom: 75px;
     border-radius: 30px;
     position: relative;
     background-image: url('../images/content/card-bgc.svg');
@@ -90,7 +90,7 @@
     background-position: top center;
     overflow: hidden;
     z-index: 0;
-    &::after {
+/*     &::after {
       position: absolute;
       content: '';
       background-image: url('../images/content/hero-card.png');
@@ -102,7 +102,7 @@
       bottom: 0;
       right: 0;
       z-index: -1;
-    }
+    } */
   
     &__title {
       font-size: 32px;
@@ -123,6 +123,12 @@
       font-size: 18px;
       color: $grey-text;
       margin-bottom: 15px;
+    }
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      object-fit: contain;
     }
   }
   &__about {
@@ -159,6 +165,7 @@
     font-size: 24px;
     line-height: 1;
     color: $white-400;
+    text-align: center;
     border-radius: 30px;
     padding: 30px 42px;
     display: flex;
@@ -169,6 +176,7 @@
     background: rgba(41, 41, 41, 0.29);
     width: fit-content;
     position: absolute;
+    border: 1px solid linear-gradient(#2b2b2b, #585858, #ffffff, rgba(41, 41, 41, 0.29));;
     z-index: 2;
     &.tag1 {
       bottom: 57%;
@@ -294,6 +302,9 @@ html[dir="rtl"] .faq__question {
     &__about {
       margin-top: 0;
     }
+    .card {
+      padding: 40px;
+    }
     &__tag {
       font-size: 18px;
       padding: 20px;
@@ -305,6 +316,7 @@ html[dir="rtl"] .faq__question {
 }
 @media (max-width: 1280px) {
  .hero {
+  padding-bottom: 0;
   &__title {
     font-size: 86px;
   }
@@ -332,14 +344,97 @@ html[dir="rtl"] .faq__question {
     &__inner {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 0;
     }
     &__content {
-      flex: 1 1 auto;
+      margin-bottom: 25px;
+    }
+    .card {
+      margin-top: -114px;
+      margin-bottom: 0;
+    }
+    &__tags {
+      position: absolute;
+      bottom: 216px;
+      width: 100%;
+    }
+    &__tag {
+      position: static;
+      width: 100%;
+      margin-bottom: 10px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media (max-width: 880px) {
+  .hero {
+    .card {
+      padding: 25px;
+      &__title{
+        font-size: 32px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    &__title {
+      margin-bottom: 25px;
+    }
+    .card {
+      padding: 25px;
+      background-image: none;
+      background-color: $accent-card;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      &__title{
+        font-size: 32px;
+        max-width: 100%;
+      }
+      &__descr {
+        max-width: 100%;
+      }
+      &__img {
+        position: static;
+      }
+    }
+  }
+}
+@media (max-width: 680px) {
+  .hero {
+    &__title {
+      font-size: 72px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    &__title {
+      font-size: 58px;
+      margin-bottom: 20px;
+    }
+    .card {
+      margin-top: 0;
     }
   }
 }
 @media (max-width: 440px) {
+  .hero {
+      &__title {
+        font-size: 45px;
+      }
+      &__tags {
+        bottom: 50px;
+      }
+    }
   .faq {
     padding: 100px 0;
     &__question {
@@ -347,6 +442,16 @@ html[dir="rtl"] .faq__question {
     }
     &__question-label {
       font-size: 18px;
+    }
+  }
+}
+@media (max-width: 385px) {
+  .hero {
+    .card {
+      padding: 40px 10px 10px 10px;
+      &__title {
+        font-size: 30px;
+      }
     }
   }
 }
