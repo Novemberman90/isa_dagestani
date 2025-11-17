@@ -51,7 +51,6 @@ window.addEventListener('DOMContentLoaded',()=>{
   //===== Slider ABOUT SECTION
 
     var swiper = new Swiper(".about-slider", {
-      //slidesPerView: 2.5,
       slidesPerView: 'auto',
       spaceBetween: 65,
       //centeredSlides: true,
@@ -64,12 +63,48 @@ window.addEventListener('DOMContentLoaded',()=>{
           slidesPerView: 'auto',
           centeredSlides: false,
         },
-        
+
         1400: {
           centeredSlides: false,
         }
       }
     });
+
+//===== Slider MEDIA SECTION
+  const mediaSwiper = new Swiper('.media-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.media-slider__btn--next',
+      prevEl: '.media-slider__btn--prev'
+    },
+    on: {
+      slideChange: function () {
+        updateTabs(this.activeIndex);
+      }
+    }
+  });
+
+  // табы
+  const tabs = document.querySelectorAll('.media-tabs__tab');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      let index = tab.dataset.index;
+      mediaSwiper.slideTo(index);
+    });
+  });
+
+  // обновление активного таба
+  function updateTabs(activeIndex) {
+    tabs.forEach(tab => tab.classList.remove('media-tabs__tab--active'));
+    tabs[activeIndex].classList.add('media-tabs__tab--active');
+  }
+
+
+
+
+
 
   //===== FAQ =====
   const ACCORDEON = document.querySelectorAll("[data-accordion]");

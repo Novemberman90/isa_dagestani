@@ -191,7 +191,6 @@
   }
 
   &__title {
-    //font-size: 98px;
     font-size: clamp(40px, 10vw, 98px);
     line-height: 0.8;
     max-width: 738px;
@@ -286,10 +285,184 @@
   }
 }
 
+.media {
+  padding: 130px 0 65px;
+  position: relative;
+  z-index: 0;
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../images/content/media-bg.svg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    top: 38%;
+    left: -12%;
+    z-index: -1;
+  }
+
+  &__pretitle {
+    color: $white-400;
+    position: relative;
+    padding: 0 10px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $white-400;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+  &__title {
+    font-size: clamp(40px, 10vw, 98px);
+    line-height: 0.8;
+    margin: 0 auto 70px auto;
+    text-align: center;
+  }
+  .media-tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    &__tab {
+      padding: 24px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      background-color: transparent;
+      @include Gordita-400;
+      font-size: 20px;
+      color: $white-400;
+      text-transform: uppercase;
+      box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      background-color: #222222c9;
+      border: 1px solid #424242;
+      transition: all .3s;
+      &--active {
+        border: 1px solid #FBD595;
+      }
+      &:hover {
+        transition: all .3s;
+        background: linear-gradient(180.00deg, rgba(246.41827392578125, 171.1123504638672, 45.01872253417969, 1), rgba(251.32211303710938, 195.81973266601562, 93.03751373291016, 1) 100%);
+        color: $dark-700;
+      }
+      &:active {
+        transition: all .3s;
+        background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
+      }
+    }
+  }
+  .media-slider {
+    &__controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: fit-content;
+      margin-left: auto;
+      margin-top: 85px;
+    }
+    &__caption {
+      @include Gordita-400;
+      font-size: 19px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white-400;
+      padding: 23px;
+      border-radius: 30px;
+      border: 1px solid #424242;
+      box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      background: #2929294a;
+      display: block;
+      width: fit-content;
+      margin: -100px auto 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+    &__btn {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-color: $liser-btn;
+      border-radius: 50%;
+
+      &--next {
+        .icon {
+          transform: rotate(45deg);
+        }
+      }
+
+      &--prev {
+        .icon {
+          transform: rotate(-135deg);
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: .5;
+      }
+    }
+  }
+  .vedio-card {
+    background-image: url('../images/content/isaDagestani-video.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 660px;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    &__link {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 133px;
+      height: 133px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ffffff1a;
+      box-shadow: 0px 36px 45px -8.55px #00000073, inset 0px 0px 17.46px 0px #ffffff1a;
+      background: radial-gradient(79.25% 79.93% at 13% 16%, #ffffff1a, #ffffff00 100%);
+      .icon {
+        margin-right: -8px;
+      }
+    }
+  
+  }
+}
 
 .faq {
   background-color: $dark-700;
   padding: 130px 0;
+  position: relative;
+  z-index: 0;
   &__title {
     font-size: 60px;
     line-height: 1;
@@ -406,6 +579,14 @@ html[dir="rtl"] .faq__question {
       }
     }
   }
+  .media {
+    .media-tabs {
+      &__tab {
+        padding: 16px 20px;
+        font-size: 20px;
+      }
+    }
+  }
 }
 @media (max-width: 1280px) {
  .hero {
@@ -462,6 +643,17 @@ html[dir="rtl"] .faq__question {
       }
     }
   }
+  .media {
+    &::before {
+      display: none;
+    }
+    .media-tabs {
+      &__tab {
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
 }
 @media (max-width: 880px) {
   .hero {
@@ -470,6 +662,15 @@ html[dir="rtl"] .faq__question {
       &__title{
         font-size: 32px;
       }
+    }
+  }
+  .media {
+    padding: 150px 0 60px;
+    &__title {
+      margin-bottom: 50px;
+    }
+    .media-tabs {
+      margin-bottom: 75px;
     }
   }
 }
@@ -494,6 +695,13 @@ html[dir="rtl"] .faq__question {
       }
       &__img {
         position: static;
+      }
+    }
+  }
+  .media {
+    .media-tabs {
+      &__tab {
+        font-size: 14px;
       }
     }
   }
@@ -535,6 +743,22 @@ html[dir="rtl"] .faq__question {
       }
     }
   }
+  .media {
+    padding: 100px 0 100px;
+
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    .media-tabs {
+      margin-bottom: 35px;
+      flex-direction: column;
+      &__tab {
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+  }
 }
 @media (max-width: 576px) {
   .hero {
@@ -552,6 +776,31 @@ html[dir="rtl"] .faq__question {
     }
     &__title {
       margin-bottom: 30px;
+    }
+  }
+  .media {
+    padding-bottom: 0;
+    .vedio-card {
+      min-height: 357px;
+      padding-bottom: 0;
+      &__link {
+        width: 65px;
+        height: 65px;
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .media-slider {
+      &__caption {
+        padding: 10px 20px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+      }
+      &__controls {
+        margin-top: 0px;
+      }
     }
   }
 }
