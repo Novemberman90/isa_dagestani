@@ -13,8 +13,8 @@
   <div class="container">
     <div class="header__inner">
       <a class="logo" href="/" aria-label="Isa Dagestani logo">
-        <p class="logo__title">Isa</p>
-        <p class="logo__title logo__title--style">Dagestani</p>
+        <p class="logo__title" data-i18n="name.logo-first">Isa</p>
+        <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p>
       </a>
       <div class="menu">
         <button class="menu__btn" type="button" aria-label="Button open / close menu">
@@ -23,7 +23,7 @@
         <nav class="menu__nav" aria-label="Main menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#about" class="menu__link menu__link--active" data-i18n="nav_about" data-scroll>About</a>
+              <a href="#about" class="menu__link" data-i18n="nav_about" data-scroll>About</a>
             </li>
             <li class="menu__item">
               <a href="#projects" class="menu__link" data-i18n="nav_projects" data-scroll>Projects</a>
@@ -202,7 +202,87 @@
       </div>
     </div>
   </section>
-  <section class="media">
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="projects__pretitle" data-i18n="projects.pretitle">My Projects</p>
+      <h2 class="projects__title title" data-i18n="projects.title">Projects</h2>
+      <div class="projects__inner">
+        <div class="projects-card">
+          <div class="projects-card__content">
+            <h3 class="projects-card__title" data-i18n="projects.card1.title">
+              Umma Life
+            </h3>
+            <p class="projects-card__sub-title" data-i18n="projects.card1.subtitle">A global social network for Muslims</p>
+            <p class="projects-card__descr" data-i18n="projects.card1.descr">
+              A platform built on freedom, truth and community. Designed for communication, learning and growth within the Ummah.
+            </p>
+          </div>
+          <ul class="projects-card__list">
+            <li class="projects-card__item">
+              <div class="projects-card__item-box">
+                <svg class="icon" width="29" height="29">
+                  <use href="./images/sprite.svg#check-mark"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list1">No censorship</p>
+              </div>
+            </li>
+            <li class="projects-card__item">
+              <div class="projects-card__item-box">
+                <svg class="icon" width="31" height="24">
+                  <use href="./images/sprite.svg#secret"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list2">Only truth</p>
+              </div>
+            </li>
+            <li class="projects-card__item">
+              <div class="projects-card__item-box">
+                <svg class="icon" width="30" height="28">
+                  <use href="./images/sprite.svg#signal"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list3">One Ummah, one network</p>
+              </div>
+            </li>
+          </ul>
+          <div class="projects-card__controls">
+            <a class="projects-card__link visit btn" href="#" target="_blank">
+              <span class="projects-card__link-title" data-i18n="projects.card1.visit">Visit ummalife.com</span>
+              <svg class="icon" width="12" height="12">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+            <button class="projects-card__link btn">
+              <span class="projects-card__link-title" data-i18n="projects.card1.download">Download the app</span>
+              <svg class="icon" width="16" height="16">
+                <use href="./images/sprite.svg#download"></use>
+              </svg>
+            </button>
+            <div class="projects-card__bg">
+              <img src="./images/content/ulmalife.jpg" alt="Umma Life">
+            </div>
+          </div>
+        </div>
+        <div class="projects-card">
+          <div class="projects-card__bg">
+            <img src="./images/content/project-card-2.jpg" alt="Umma Projects Ecosystem">
+          </div>
+          <div class="projects-card__content">
+            <h3 class="projects-card__title" data-i18n="projects.card2.title">
+              Umma Projects Ecosystem
+            </h3>
+            <p class="projects-card__sub-title" data-i18n="projects.card2.subtitle">Beyond one platform</p>
+            <p class="projects-card__descr" data-i18n="projects.card2.descr">
+              An ecosystem of products supporting the Muslim community worldwide, from media to education.
+            </p>
+          </div>
+          <a class="projects-card__link btn" href="#" target="_blank">
+            <span class="projects-card__link-title" data-i18n="projects.card2.link">@ummaprojects</span>
+            <img src="./images/icon/telegram-3d.svg" alt="telegram link">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="media" id="media">
     <div class="container">
       <p class="media__pretitle" data-i18n="media.pretitle">Media</p>
       <h2 class="media__title title" data-i18n="media.title">
@@ -256,7 +336,7 @@
                 </div>
               </div>
             </div>
-            <p class="media-slider__caption">The future of the Muslim digital space</p>
+            <p class="media-slider__caption" data-i18n="media.caption">The future of the Muslim digital space</p>
             <div class="media-slider__controls">
               <div class="media-slider__btn media-slider__btn--prev swiper-button-disabled">
                 <svg class="icon" width="12" height="12">
@@ -423,8 +503,8 @@
       <div class="footer__inner">
         <div class="footer__social-block">
           <a class="logo" href="./index.html">
-           <p class="logo__title">Isa</p>
-           <p class="logo__title logo__title--style">Dagestani</p> 
+           <p class="logo__title" data-i18n="name.logo-first">Isa</p>
+           <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p> 
           </a>
           <ul class="social-list">
             <li class="social-list__item">
@@ -457,21 +537,21 @@
             </li>
           </ul>
           <div class="footer__social-decr-box">
-            <p class="footer__social-decr">
+            <p class="footer__social-decr" data-i18n="footer.social-desc-1">
               Building meaningful digital products for a stronger global Ummah.
             </p>
-            <p class="footer__social-decr">
+            <p class="footer__social-decr" data-i18n="footer.social-desc-2">
               Creating secure, scalable and purpose-driven technology for millions of users.
             </p>
-            <p class="footer__social-decr">
+            <p class="footer__social-decr" data-i18n="footer.social-desc-3">
               Innovation with purpose. Impact at scale.
             </p>
           </div>
         </div>
         <div class="footer__hero-block">
           <h2 class="footer__hero-title">
-            <span class="footer__hero-title-txt">Isa</span>
-            <span class="footer__hero-title-txt footer__hero-title-txt--style">Dagestani</span>
+            <span class="footer__hero-title-txt" data-i18n="footer.logo-first">Isa</span>
+            <span class="footer__hero-title-txt footer__hero-title-txt--style" data-i18n="footer.logo-last">Dagestani</span>
           </h2>
           <picture>
             <source srcset="./images/content/footer-hero.webp" type="image/webp">
@@ -483,26 +563,26 @@
         <div class="footer__nav-block">
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">About</a>
+              <a href="#" class="footer__nav-link" data-i18n="footer.menu.about">About</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Projects</a>
+              <a href="#" class="footer__nav-link" data-i18n="footer.menu.projects">Projects</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Media</a>
+              <a href="#media" class="footer__nav-link" data-i18n="footer.menu.media">Media</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Contact</a>
+              <a href="#contact" class="footer__nav-link" data-i18n="footer.menu.contact">Contact</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Privacy policy</a>
+              <a href="#" class="footer__nav-link" data-i18n="footer.menu.privacy">Privacy policy</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Terms & Conditionals</a>
+              <a href="#" class="footer__nav-link" data-i18n="footer.menu.terms">Terms & Conditionals</a>
             </li>
           </ul>
-          <a class="contact-us" href="#">
-            <p class="contact-us__title">Свяжитесь с нами</p>
+          <a class="contact-us" href="#header">
+            <p class="contact-us__title" data-i18n="footer.contact-btn">Свяжитесь с нами</p>
             <span class="contact-us__img">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
@@ -513,13 +593,14 @@
    
       </div>
     </div>
-    <h2 class="footer__bg-title">Isa Dagestani</h2>
+    <h2 class="footer__bg-title" data-i18n="footer.bg-title">Isa Dagestani</h2>
   </div>
 </footer>
 
 
 
-
   <script src="./js/main.min.js"></script>
+ <!--  <script src="./lang/lang.json"></script> -->
+  
 </body>
 </html>

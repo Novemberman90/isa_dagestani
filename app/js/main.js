@@ -141,5 +141,39 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 
 
+let translations = {};
+let currentLang = "en";
+
+// Загружаем JSON
+fetch("./lang/lang.json")
+  .then(res => res.json())
+  .then(data => {
+    translations = data;
+    updateContent();
+  });
+
+// Функция обновления всех текстов
+function updateContent() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[currentLang] && translations[currentLang][key]) {
+      el.textContent = translations[currentLang][key];
+    }
+  });
+}
+
+  // Переключение языка
+  document.querySelectorAll("[data-lang]").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      currentLang = btn.dataset.lang;
+      updateContent();
+
+      // визуально активная кнопка
+      document.querySelectorAll(".lang__option").forEach(l => l.classList.remove("lang__option--active"));
+      btn.classList.add("lang__option--active");
+    });
+  });
+
 });
 

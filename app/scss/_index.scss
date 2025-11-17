@@ -285,6 +285,162 @@
   }
 }
 
+.projects {
+  padding: 130px 0 75px;
+  background-color: $accent-card;
+  &__pretitle {
+    color: $dark-700;
+    position: relative;
+    padding: 0 10px;
+    width: fit-content;
+    margin-bottom: 15px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $dark-700;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+  
+  &__title {
+    font-size: clamp(40px, 10vw, 84px);
+    line-height: 0.8;
+    margin-bottom: 40px;
+    color: $dark-700;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .projects-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #222222e3;
+    background-color: rgba($color: $dark-700, $alpha: 0.89);
+    padding: 60px 25px 50px 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    max-width: 560px;
+    width: 100%;
+    transition: all .3s;
+    &__bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      max-width: 425px;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 34px;
+      @include Goldman-700;
+      line-height: 0.8;
+      color: $white-400;
+      margin-bottom: 25px;
+    }
+    &__sub-title {
+      font-size: 18px;
+      line-height: 1;
+      margin-bottom: 30px;
+      color: $white-400;
+    }
+    &__descr {
+      font-size: 17px;
+      color: rgba($color: $white-400, $alpha:0.54);
+      line-height: 1;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__item-txt {
+      font-size: 17px;
+      line-height: 1;
+      color: $white-400;
+      text-align: center;
+    }
+    &__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+    }
+    &__link {
+      padding: 20px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 17px;
+      @include Gordita-500;
+      color: $dark-700;
+      border-radius: 50px;
+      border: none;
+      width: 100%;
+    }
+    .visit {
+      transition: all .3s;
+      &::after {
+        background-image: url(../images/content/ulmalife.jpg);
+        background-position: left 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 25px;
+        bottom: 0;
+        transition: all .3s;
+        opacity: 0;
+        z-index: 2;
+      }
+    
+      &:hover {
+        transition: all .3s;
+    
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 .media {
   padding: 130px 0 65px;
   position: relative;
@@ -553,6 +709,7 @@
     }
   }
 }
+
 html[dir="rtl"] .faq__question {
   text-align: right;
 }

@@ -110,7 +110,8 @@ function building() {
         'app/images/**/*.*', // выбираем все файлы (картинки)
         'app/fonts/*.*',
         'app/js/main.min.js',
-        'app/**/*.html'
+        'app/**/*.html',
+        'app/lang/**/*.json'
     ], {base : 'app'})
     .pipe(dest('dist'))
 }

@@ -1,0 +1,131 @@
+{
+  "en": {
+    "name.logo-first": "Isa",
+    "surname.logo-last": "Dagestani",
+
+    "nav_about": "About",
+    "nav_projects": "Projects",
+    "nav_media": "Media",
+    "nav_contact": "Contact",
+
+    "hero.name": "Isa",
+    "hero.surname": "Dagestani",
+    "hero.subtitle": "A visionary building global products for millions.",
+    "hero.tag1": "IT Entrepreneur",
+    "hero.tag2": "Founder of UMMA Life",
+    "hero.tag3": "Building the future for the Ummah",
+
+    "hero.card.title1": "Shaping the digital future of the",
+    "hero.card.title2": "Muslim world",
+    "hero.card.text": "Creating platforms powered by truth, connection and freedom. My mission is to give the Ummah tools that inspire growth and unity.",
+
+    "about.pretitle": "About us",
+    "about.title": "More than just IT",
+
+    "about.card-1.title": "Where it all began",
+    "about.card-1.text": "I grew up in Dagestan, in the city of Khasavyurt. These values shaped my worldview and became the foundation of my projects. For the last 12 years Türkiye has been my second home, where ideas turn into global products.",
+
+    "about.card-2.title": "A technical path that led to leadership",
+    "about.card-2.text": "Years of experience as a system engineer, programmer and Big Data specialist gave me the tools to build, not just dream. Today, as a founder and CEO, I create an ecosystem of products transforming the digital life of the global Muslim community.",
+
+    "about.card-3.title": "A mission larger than a product",
+    "about.card-3.text": "In a world full of noise and censorship, I build platforms based on truth and freedom of speech. My mission is to empower the Ummah with tools for connection, education and unity. I personally invested in Umma Life from day one because I believe in it with all my heart.",
+
+    "projects.pretitle": "My Projects",
+    "projects.title": "Projects",
+
+    "projects.card1.title": "Umma Life",
+    "projects.card1.subtitle": "A global social network for Muslims",
+    "projects.card1.descr": "A platform built on freedom, truth and community. Designed for communication, learning and growth within the Ummah.",
+    "projects.card1.list1": "No censorship",
+    "projects.card1.list2": "Only truth",
+    "projects.card1.list3": "One Ummah, one network",
+    "projects.card1.visit": "Visit ummalife.com",
+    "projects.card1.download": "Download the app",
+
+    "projects.card2.title": "Umma Projects Ecosystem",
+    "projects.card2.subtitle": "Beyond one platform",
+    "projects.card2.descr": "An ecosystem of products supporting the Muslim community worldwide, from media to education.",
+    "projects.card2.link": "@ummaprojects",
+
+    "media.pretitle": "Media",
+    "media.title": "In the Media",
+    "media.tab-1": "YouTube interview: ALIF TV",
+    "media.tab-2": "World Blockchain Summit 2023",
+    "media.tab-3": "Mention from Azon Global",
+    "media.caption": "The future of the Muslim digital space",
+
+    "q1": "What is Umma Life?",
+    "a1": "Umma Life is a global social network for Muslims, built around truth, freedom of speech and community connection. It focuses on communication, learning and growth within the Ummah.",
+
+    "q2": "What other projects are part of the Umma ecosystem?",
+    "a2": "The Umma ecosystem is a comprehensive set of platforms and projects designed to integrate finance, technology, and community. While the core focus is often on Umma Network, the ecosystem is expanding to include several key projects that build upon its decentralized foundation.",
+
+    "q3": "Where is Isa Dagestani based?"
+  },
+
+  "ru": {
+    "name.logo-first": "Иса",
+    "surname.logo-last": "Дагестани",
+
+    "nav_about": "О нас",
+    "nav_projects": "Проекты",
+    "nav_media": "Медиа",
+    "nav_contact": "Контакты",
+
+    "hero.name": "Иса",
+    "hero.surname": "Дагестани",
+    "hero.subtitle": "Видение, создающее глобальные продукты для миллионов.",
+    "hero.tag1": "IT-предприниматель",
+    "hero.tag2": "Основатель UMMA Life",
+    "hero.tag3": "Создаю будущее для уммы",
+
+    "hero.card.title1": "Формируя цифровое будущее",
+    "hero.card.title2": "мусульманского мира",
+    "hero.card.text": "Создаю платформы, основанные на правде, свободе и единстве. Моя миссия — дать умме инструменты для роста и развития.",
+
+    "about.pretitle": "О нас",
+    "about.title": "Больше чем IT",
+
+    "about.card-1.title": "Где всё началось",
+    "about.card-1.text": "Я вырос в Дагестане, в городе Хасавюрт. Эти ценности сформировали мой взгляд и стали основой моих проектов. Последние 12 лет Турция стала моим вторым домом, где идеи становятся глобальными продуктами.",
+
+    "about.card-2.title": "Путь технаря, приведший к лидерству",
+    "about.card-2.text": "Годы опыта как системного инженера, программиста и Big Data специалиста дали мне инструменты, чтобы создавать, а не просто мечтать. Сегодня, как основатель и CEO, я создаю экосистему продуктов, меняющих цифровую жизнь глобальной уммы.",
+
+    "about.card-3.title": "Миссия больше чем продукт",
+    "about.card-3.text": "В мире шума и цензуры я создаю платформы, основанные на правде и свободе слова. Моя миссия — дать умме инструменты для связи, образования и единства.",
+
+    "projects.pretitle": "Мои проекты",
+    "projects.title": "Проекты",
+
+    "projects.card1.title": "Umma Life",
+    "projects.card1.subtitle": "Глобальная социальная сеть для мусульман",
+    "projects.card1.descr": "Платформа, основанная на свободе, правде и сообществе.",
+    "projects.card1.list1": "Без цензуры",
+    "projects.card1.list2": "Только правда",
+    "projects.card1.list3": "Одна умма — одна сеть",
+    "projects.card1.visit": "Посетите ummalife.com",
+    "projects.card1.download": "Скачать приложение",
+
+    "projects.card2.title": "Экосистема Umma Projects",
+    "projects.card2.subtitle": "Больше чем одна платформа",
+    "projects.card2.descr": "Экосистема продуктов, поддерживающих мусульманское сообщество по всему миру.",
+    "projects.card2.link": "@ummaprojects",
+
+    "media.pretitle": "Медиа",
+    "media.title": "В медиа",
+    "media.tab-1": "Интервью YouTube: ALIF TV",
+    "media.tab-2": "World Blockchain Summit 2023",
+    "media.tab-3": "Упоминание от Azon Global",
+    "media.caption": "Будущее цифрового мусульманского пространства",
+
+    "q1": "Что такое Umma Life?",
+    "a1": "Umma Life — глобальная социальная сеть для мусульман, основанная на правде, свободе слова и общении.",
+
+    "q2": "Какие проекты входят в экосистему Umma?",
+    "a2": "Экосистема Umma — это набор платформ, соединяющих технологии, финансы и сообщество.",
+
+    "q3": "Где находится Иса Дагестани?"
+  }
+}
