@@ -164,9 +164,7 @@
 
 .about  {
   padding: 100px 0 130px;
-  &__inner {
-    overflow-x: hidden;
-  }
+  overflow: hidden;
   &__pretitle {
     color: $white-400;
     position: relative;
@@ -193,7 +191,8 @@
   }
 
   &__title {
-    font-size: 98px;
+    //font-size: 98px;
+    font-size: clamp(40px, 10vw, 98px);
     line-height: 0.8;
     max-width: 738px;
     margin: 0 auto 50px auto;
@@ -254,7 +253,6 @@
       height: 100%;
       padding: 10px 0 0px 25px;
       border-radius: 30px;
-      position: relative;
       background-image: url('../images/content/about-card-bg.svg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -509,6 +507,34 @@ html[dir="rtl"] .faq__question {
       font-size: 18px;
     }
   }
+  .about {
+    padding: 125px 0 100px;
+    .swiper-slide {
+      width: 100% !important;
+    }
+    .card {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 110px 0 0px;
+      &__inner {
+        padding: 100px 15px 50px;
+        background-color: $accent-card;
+        background-image: none;
+        flex-direction: column-reverse;
+      }
+      &__content {
+        max-width: 100%;
+      }
+      &__img {
+        width: 192px;
+        height: 184px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
 }
 @media (max-width: 576px) {
   .hero {
@@ -518,6 +544,14 @@ html[dir="rtl"] .faq__question {
     }
     .card {
       margin-top: 0;
+    }
+  }
+  .about {
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__title {
+      margin-bottom: 30px;
     }
   }
 }

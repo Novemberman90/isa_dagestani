@@ -59,6 +59,16 @@ window.addEventListener('DOMContentLoaded',()=>{
         nextEl: ".about-slider__btn--next",
         prevEl: ".about-slider__btn--prev",
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 'auto',
+          centeredSlides: false,
+        },
+        
+        1400: {
+          centeredSlides: false,
+        }
+      }
     });
 
   //===== FAQ =====
