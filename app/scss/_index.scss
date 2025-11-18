@@ -455,6 +455,22 @@
         }
       }
     }
+    &__link-title {
+      &--tg {
+        position: relative;
+        padding-right: 45px;
+        &::after {
+          position: absolute;
+          content: '';
+          background-image: url('../images/icon/telegram-3d.svg');
+          width: 36px;
+          height: 35px;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+    }
   }
 }
 
