@@ -290,6 +290,7 @@
   background-color: $accent-card;
   position: relative; 
   z-index: 0;
+  overflow: hidden;
   &::after {
     position: absolute;
     content: '';
@@ -828,10 +829,17 @@ html[dir="rtl"] .faq__question {
     }
   }
   .projects {
+    padding: 100px 0;
+    &::after {
+      background-image: url('../images/content/projects-bg-m.svg');
+      top: 330px;
+      width: 614px;
+      height: 980px;
+    }
     &__pretitle,
     &__title {
       text-align: center;
-      margin: 0 auto;
+      margin: 0 auto 50px auto;
     }
     &__inner {
       flex-wrap: wrap;
@@ -943,6 +951,14 @@ html[dir="rtl"] .faq__question {
       }
     }
   }
+  .projects {
+    .projects-card {
+      &__link {
+        padding: 20px 10px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 @media (max-width: 576px) {
   .hero {
@@ -984,6 +1000,36 @@ html[dir="rtl"] .faq__question {
       }
       &__controls {
         margin-top: 0px;
+      }
+    }
+  }
+  .projects {
+    padding: 50px 0 60px;
+    &::after {
+      display: none;
+    }
+    &__pretitle {
+      margin: 0 0 20px 0;
+      text-align: inherit;
+    }
+    &__title {
+      margin-bottom: 30px;
+      text-align: inherit;
+    }
+    &__inner {
+      gap: 25px;
+    }
+    .projects-card {
+      &__list {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      &__controls {
+        flex-wrap: wrap;
+      }
+      &__link {
+        padding: 20px 10px;
+        font-size: 18px;
       }
     }
   }
