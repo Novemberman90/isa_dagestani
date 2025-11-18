@@ -286,14 +286,30 @@
 }
 
 .projects {
-  padding: 130px 0 75px;
+  padding: 125px 0 75px;
   background-color: $accent-card;
+  position: relative; 
+  z-index: 0;
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url('../images/content/projects-bg.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   &__pretitle {
     color: $dark-700;
     position: relative;
     padding: 0 10px;
     width: fit-content;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 
     &::before,
     &::after {
@@ -318,27 +334,25 @@
   &__title {
     font-size: clamp(40px, 10vw, 84px);
     line-height: 0.8;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     color: $dark-700;
   }
   &__inner {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
   }
   .projects-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #222222e3;
-    background-color: rgba($color: $dark-700, $alpha: 0.89);
     padding: 60px 25px 50px 25px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     max-width: 560px;
     width: 100%;
-    transition: all .3s;
+    background-color: $dark-700;
+    z-index: 0;
     &__bg {
       position: absolute;
       z-index: -1;
@@ -346,6 +360,7 @@
       bottom: 0;
       right: 0;
       left: 0;
+      opacity: 0.1;
       img {
         width: 100%;
         height: 100%;
@@ -427,7 +442,7 @@
         bottom: 0;
         transition: all .3s;
         opacity: 0;
-        z-index: 2;
+        z-index: -2;
       }
     
       &:hover {
@@ -435,6 +450,7 @@
     
         &::after {
           opacity: 1;
+          z-index: 2;
         }
       }
     }
@@ -809,6 +825,17 @@ html[dir="rtl"] .faq__question {
         font-size: 16px;
         line-height: 1;
       }
+    }
+  }
+  .projects {
+    &__pretitle,
+    &__title {
+      text-align: center;
+      margin: 0 auto;
+    }
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }

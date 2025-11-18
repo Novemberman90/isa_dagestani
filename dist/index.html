@@ -58,8 +58,8 @@
       <div class="container">
         <div class="hero__inner">
           <div class="hero__content">
-            <h1 class="hero__title title" data-i18n="hero.name">
-              Isa
+            <h1 class="hero__title title" >
+              <span data-i18n="hero.name">Isa</span>
               <span class="accent-text" data-i18n="hero.surname">Dagestani</span>
             </h1>
             <p class="hero__subtitle" data-i18n="hero.subtitle">A visionary building global <spas class="accent-text">products for millions.</spas>
@@ -208,6 +208,9 @@
       <h2 class="projects__title title" data-i18n="projects.title">Projects</h2>
       <div class="projects__inner">
         <div class="projects-card">
+          <div class="projects-card__bg">
+            <img src="./images/content/ulmalife.jpg" alt="Umma Life">
+          </div>
           <div class="projects-card__content">
             <h3 class="projects-card__title" data-i18n="projects.card1.title">
               Umma Life
@@ -219,28 +222,22 @@
           </div>
           <ul class="projects-card__list">
             <li class="projects-card__item">
-              <div class="projects-card__item-box">
-                <svg class="icon" width="29" height="29">
-                  <use href="./images/sprite.svg#check-mark"></use>
-                </svg>
-                <p class="projects-card__item-txt" data-i18n="projects.card1.list1">No censorship</p>
-              </div>
+              <svg class="icon" width="29" height="29">
+                <use href="./images/sprite.svg#check-mark"></use>
+              </svg>
+              <p class="projects-card__item-txt" data-i18n="projects.card1.list1">No censorship</p>
             </li>
             <li class="projects-card__item">
-              <div class="projects-card__item-box">
-                <svg class="icon" width="31" height="24">
-                  <use href="./images/sprite.svg#secret"></use>
-                </svg>
-                <p class="projects-card__item-txt" data-i18n="projects.card1.list2">Only truth</p>
-              </div>
+              <svg class="icon" width="31" height="28">
+                <use href="./images/sprite.svg#secret"></use>
+              </svg>
+              <p class="projects-card__item-txt" data-i18n="projects.card1.list2">Only truth</p>
             </li>
             <li class="projects-card__item">
-              <div class="projects-card__item-box">
-                <svg class="icon" width="30" height="28">
-                  <use href="./images/sprite.svg#signal"></use>
-                </svg>
-                <p class="projects-card__item-txt" data-i18n="projects.card1.list3">One Ummah, one network</p>
-              </div>
+              <svg class="icon" width="30" height="28">
+                <use href="./images/sprite.svg#signal"></use>
+              </svg>
+              <p class="projects-card__item-txt" data-i18n="projects.card1.list3">One Ummah, one network</p>
             </li>
           </ul>
           <div class="projects-card__controls">
@@ -256,9 +253,6 @@
                 <use href="./images/sprite.svg#download"></use>
               </svg>
             </button>
-            <div class="projects-card__bg">
-              <img src="./images/content/ulmalife.jpg" alt="Umma Life">
-            </div>
           </div>
         </div>
         <div class="projects-card">
@@ -358,8 +352,8 @@
       <h2 class="faq__title title">Faq</h2>
       <div class="faq__accordion">
         <div class="faq__item" data-accordion>
-          <button class="faq__question" data-i18n="q1" type="button">
-            <span class="faq__question-label">What is Umma Life?</span>
+          <button class="faq__question" type="button">
+            <span class="faq__question-label" data-i18n="q1">What is Umma Life?</span>
             <span class="faq__question-icon">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
@@ -376,8 +370,8 @@
           </div>
         </div>
         <div class="faq__item" data-accordion>
-          <button class="faq__question" data-i18n="q2" type="button">
-            <span class="faq__question-label">What other projects are part of the Umma ecosystem?</span>
+          <button class="faq__question" type="button">
+            <span class="faq__question-label" data-i18n="q2">What other projects are part of the Umma ecosystem?</span>
             <span class="faq__question-icon">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
@@ -395,8 +389,8 @@
           </div>
         </div>
         <div class="faq__item" data-accordion>
-          <button class="faq__question" data-i18n="q3" type="button">
-            <span class="faq__question-label">Where is Isa Dagestani based?</span>
+          <button class="faq__question" type="button">
+            <span class="faq__question-label" data-i18n="q3">Where is Isa Dagestani based?</span>
             <span class="faq__question-icon">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
@@ -420,8 +414,8 @@
           </div>
         </div>
         <div class="faq__item" data-accordion>
-          <button class="faq__question" data-i18n="q4" type="button">
-            <span class="faq__question-label">Does Isa personally invest in his projects?</span>
+          <button class="faq__question" type="button">
+            <span class="faq__question-label" data-i18n="q4">Does Isa personally invest in his projects?</span>
             <span class="faq__question-icon">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
@@ -455,8 +449,8 @@
           </div>
         </div>
         <div class="faq__item" data-accordion>
-          <button class="faq__question" data-i18n="q5" type="button">
-            <span class="faq__question-label">How can I contact Isa for collaboration or partnership?</span>
+          <button class="faq__question"  type="button">
+            <span class="faq__question-label" data-i18n="q5">How can I contact Isa for collaboration or partnership?</span>
             <span class="faq__question-icon">
               <svg class="icon" width="12" height="12">
                 <use href="./images/sprite.svg#arrow"></use>
