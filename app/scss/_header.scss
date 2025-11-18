@@ -5,6 +5,10 @@
   inset: 0;
   height: fit-content;
   z-index: 30;
+  &--blur {
+    backdrop-filter: blur(30px);
+    background-color: rgba($color: $dark-700, $alpha: 0.3);
+  }
   &__inner {
     display: flex;
     align-items: center;

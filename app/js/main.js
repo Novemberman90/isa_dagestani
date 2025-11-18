@@ -48,6 +48,59 @@ window.addEventListener('DOMContentLoaded',()=>{
       })
   }
 
+  // Создаем IntersectionObserver, который будет следить за элементами на странице
+const observer = new IntersectionObserver((entries)=> {
+  entries.forEach(entry => {
+
+     // Проверяем, пересек ли элемент 50% своей высоты в зоне видимости
+    if(entry.isIntersecting){
+      // Получаем id элемента, который сейчас виден
+       const activeId = entry.target.id;
+       
+       // Удаляем класс активности у всех элементов списка навигации
+       document.querySelectorAll('.menu__link').forEach(item => {
+        item.classList.remove('menu__link--active')
+       });
+
+       // Находим ссылку, которая ведет к активному элементу
+       const adctivLink = document.querySelector(`.menu__link[href="#${activeId}"]`);
+
+       // Если такая ссылка существует, добавляем активный класс ее родителю (элементу списка)
+       if(adctivLink) {
+        adctivLink.closest('.menu__link').classList.add('menu__link--active');
+       }
+    }
+
+  });
+}, {threshold: 0.20} ); 
+
+// Находим все элементы, за которыми будем следить, и подключаем их к Observer'у
+
+document.querySelectorAll('#hero, #about, #projects, #media, #contact').forEach(element => {
+  observer.observe(element)
+});
+
+/* При скроле меняется хедер */
+let isScrolled = false;
+const headerScroll = () => {
+  const header = document.querySelector('.header');
+  const headerHeght = header.offsetHeight;
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+
+    if (scrollPosition >= headerHeght && !isScrolled) {
+    isScrolled = true;
+    header.classList.add('header--blur')
+      
+  } else if (scrollPosition  <= headerHeght && isScrolled) {
+     isScrolled = false;
+     header.classList.remove('header--blur')
+  }
+  
+}
+window.addEventListener('scroll', headerScroll);
+
+
   //===== Slider ABOUT SECTION
 
     var swiper = new Swiper(".about-slider", {
@@ -96,7 +149,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   });
 
   // обновление активного таба
-  function updateTabs(activeIndex) {
+  const updateTabs =(activeIndex) => {
     tabs.forEach(tab => tab.classList.remove('media-tabs__tab--active'));
     tabs[activeIndex].classList.add('media-tabs__tab--active');
   }
@@ -153,7 +206,7 @@ fetch("./lang/lang.json")
   });
 
 // Функция обновления всех текстов
-function updateContent() {
+const updateContent = () => {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
     if (translations[currentLang] && translations[currentLang][key]) {
