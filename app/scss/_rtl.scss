@@ -68,10 +68,12 @@ html[dir="rtl"] {
       &.tag1 {
         left: -70px;
         right: auto;
+        bottom: 50%;
       }
       &.tag2 {
         left: auto;
         right: -65px;
+        bottom: 37%;
       }
       &.tag3 {
         width: 100%;
@@ -79,21 +81,87 @@ html[dir="rtl"] {
     }
   }
   .media {
+    .media-tabs {
+      flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
     &::before {
       left: 0;
     }
+    .media-slider {
+      &__controls {
+        flex-direction: row-reverse;
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
   }
   .about {
+    &__title {
+      max-width: 100%;
+      text-align: center;
+    }
     .card {
       transform: scale3d(-1, 1, 1);
       &__inner {
         flex-direction: row-reverse;
       }
     }
+    .about-slider {
+      &__controls {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
   }
   .projects {
     &::after {
       transform: scale3d(-1, 1, 1);
+      background-size: auto;
+    }
+  }
+  .media {
+    .vedio-card__link {
+      .icon {
+        transform: scale3d(-1, 1, 1);
+        margin-right: 12px;
+      }
+    }
+  }
+  .faq {
+    &__title {
+      text-align: right;
+    }
+    &__accordion {
+      margin: 0;
+    }
+    &__question-icon {
+      .icon {
+        transform: rotate(-135deg);
+      }
+      &--open {
+        .icon {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .contact-us {
+    &__img {
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+  } 
+
+  @media (max-width:1540px) {
+    .hero {
+      &__tag {
+        &.tag1 {
+          left: 0px;
+        }
+      }
     }
   }
 }

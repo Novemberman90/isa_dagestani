@@ -211,7 +211,7 @@
 
   &__title {
     font-size: clamp(40px, 10vw, 98px);
-    line-height: 0.8;
+    line-height: 1;
     max-width: 738px;
     margin: 0 auto 50px auto;
     text-align: center;
@@ -285,13 +285,13 @@
     }
     &__title {
       color: $dark-750;
-      font-size: 32px;
+      font-size: 28px;
       line-height: 0.8;
       margin-bottom: 10px;
     }
   
     &__descr {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1;
       color: $grey-text;
     }
