@@ -900,6 +900,9 @@ html[dir="rtl"] .faq__question {
     }
     .media-tabs {
       margin-bottom: 75px;
+      &__tab {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -924,13 +927,6 @@ html[dir="rtl"] .faq__question {
       }
       &__img {
         position: static;
-      }
-    }
-  }
-  .media {
-    .media-tabs {
-      &__tab {
-        font-size: 14px;
       }
     }
   }

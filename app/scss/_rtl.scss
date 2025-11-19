@@ -82,7 +82,7 @@ html[dir="rtl"] {
   }
   .media {
     .media-tabs {
-      flex-direction: row-reverse;
+      flex-wrap: wrap;
       flex-direction: row-reverse;
       justify-content: flex-end;
     }
@@ -112,7 +112,15 @@ html[dir="rtl"] {
       &__controls {
         margin-left: 0;
         margin-right: auto;
+        
       }
+/*       &__btn {
+        &--nex {
+          .icon {
+            transform: rotate(-135deg);
+          }
+        }
+      } */
     }
   }
   .projects {
@@ -164,4 +172,32 @@ html[dir="rtl"] {
       }
     }
   }
+  @media (max-width: 880px) {
+   .menu {
+     &__btn {
+        span{
+          &::before {
+            left: auto;
+            right: 0; // зеркалим начальную позицию
+          }
+          &::after {
+          right: auto;
+          left: 0; // зеркалим начальную позицию
+        }
+        }
+      &--active {
+        span {
+          &::before {
+            left: 0;
+            right: auto;
+            transform: translate(-0%, -50%) rotate(45deg);
+          }
+          &::after {
+            transform: translate(0%, -50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+ }
 }

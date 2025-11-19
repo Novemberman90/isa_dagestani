@@ -107,6 +107,7 @@ window.addEventListener('scroll', headerScroll);
     var swiper = new Swiper(".about-slider", {
       slidesPerView: 'auto',
       spaceBetween: 65,
+    
       //centeredSlides: true,
       navigation: {
         nextEl: ".about-slider__btn--next",
@@ -128,6 +129,7 @@ window.addEventListener('scroll', headerScroll);
   const mediaSwiper = new Swiper('.media-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
+  
     navigation: {
       nextEl: '.media-slider__btn--next',
       prevEl: '.media-slider__btn--prev'
@@ -138,6 +140,8 @@ window.addEventListener('scroll', headerScroll);
       }
     }
   });
+
+
 
   // табы
   const tabs = document.querySelectorAll('.media-tabs__tab');
