@@ -1,0 +1,99 @@
+@use 'importer' as *;
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  body {
+    font-family: 'Noto Sans Arabic', sans-serif !important;
+  }
+  .header {
+    .lang {
+      flex-direction: row-reverse;
+      &__item {
+        &::after {
+          position: absolute;
+          content: '/';
+          color: $grey-500;
+          font-size: 24px;
+          right: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &::before {
+          position: absolute;
+          content: '/';
+          color: $grey-500;
+          font-size: 24px;
+          left: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+  
+        &:first-child {
+          padding: 0;
+          &::after,&::before {
+            display: none;
+          }
+        }
+  
+        &:last-child {
+          padding: 0;
+          &::after,&::before {
+            display: none;
+          }
+        }
+      }
+  
+      &__option {
+        font-weight: 400;
+      }
+    }
+  }
+  .hero {
+
+    .card {
+      background-image: url('../images/content/card-bgc-rtl.svg');
+      background-position: 0 0;
+      padding-left: 0;
+      padding-right: 30px;
+      &__img {
+        right: auto;
+        left: 0;
+        transform: scale3d(-1, 1, 1);
+      }
+    }
+    &__about-img {
+      transform: scale3d(-1, 1, 1);
+    }
+    &__tag {
+      &.tag1 {
+        left: -70px;
+        right: auto;
+      }
+      &.tag2 {
+        left: auto;
+        right: -65px;
+      }
+      &.tag3 {
+        width: 100%;
+      }
+    }
+  }
+  .media {
+    &::before {
+      left: 0;
+    }
+  }
+  .about {
+    .card {
+      transform: scale3d(-1, 1, 1);
+      &__inner {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .projects {
+    &::after {
+      transform: scale3d(-1, 1, 1);
+    }
+  }
+}

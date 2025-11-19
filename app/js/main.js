@@ -102,6 +102,7 @@ window.addEventListener('scroll', headerScroll);
 
 
   //===== Slider ABOUT SECTION
+/* const isRTL = document.documentElement.getAttribute('dir') === 'rtl'; */
 
     var swiper = new Swiper(".about-slider", {
       slidesPerView: 'auto',
@@ -120,7 +121,7 @@ window.addEventListener('scroll', headerScroll);
         1400: {
           centeredSlides: false,
         }
-      }
+      },
     });
 
 //===== Slider MEDIA SECTION
@@ -203,7 +204,22 @@ fetch("./lang/lang.json")
   .then(data => {
     translations = data;
     updateContent();
+    applyLanguage(currentLang)
   });
+
+
+  const applyLanguage = (lang) => {
+  document.documentElement.setAttribute("lang", lang);
+
+  if (lang === "ar") {
+    document.documentElement.classList.add("arabic");
+    document.documentElement.setAttribute("dir", "rtl");
+  } else {
+    document.documentElement.classList.remove("arabic");
+    document.documentElement.removeAttribute("dir");
+  }
+}
+
 
 // Функция обновления всех текстов
 const updateContent = () => {
@@ -221,12 +237,15 @@ const updateContent = () => {
       e.preventDefault();
       currentLang = btn.dataset.lang;
       updateContent();
+      applyLanguage(currentLang);
 
       // визуально активная кнопка
       document.querySelectorAll(".lang__option").forEach(l => l.classList.remove("lang__option--active"));
       btn.classList.add("lang__option--active");
     });
   });
+
+
 
 });
 

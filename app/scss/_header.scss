@@ -1,6 +1,7 @@
 @use 'importer' as *;
 .header {
   padding-top: 35px;
+  padding-bottom: 10px;
   position: fixed;
   inset: 0;
   height: fit-content;
@@ -148,6 +149,9 @@
   }
 }
 @media (max-width: 880px) {
+  .header {
+    padding: 40px 0 20px;
+  }
   .menu {
     width: auto;
     &__btn {

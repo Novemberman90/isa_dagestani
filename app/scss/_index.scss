@@ -50,6 +50,7 @@
       "card    about";
     gap: 30px 30px;
     align-self: center;
+    //position: relative;
   }
   &__content {
     max-width: 800px;
@@ -90,7 +91,9 @@
     background-position: top center;
     overflow: hidden;
     z-index: 0;
-  
+    &__content {
+      z-index: 1;
+    }
     &__title {
       font-size: 32px;
       line-height: 0.8;
@@ -100,6 +103,7 @@
     }
   
     &__title-txt {
+      display: block;
       &--style {
         color: $accent-text;
       }
@@ -116,13 +120,28 @@
       right: 0;
       bottom: 0px;
       object-fit: contain;
+      z-index: 0;
     }
   }
   &__about {
     grid-area: about;
     position: relative;
+    max-width: 596px;
+    height: 100%;
     margin-top: -70px;
-  }
+    /*     
+    background-image: url('../images/content/hero-hero.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    //max-width: 596px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0; */
+    }
   
   &__about-img {
     max-width: 596px;
