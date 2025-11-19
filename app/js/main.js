@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded',()=>{
 
   // ===== MENU =====
@@ -104,11 +105,10 @@ window.addEventListener('scroll', headerScroll);
   //===== Slider ABOUT SECTION
 /* const isRTL = document.documentElement.getAttribute('dir') === 'rtl'; */
 
-    var swiper = new Swiper(".about-slider", {
+
+    let aboutSlider = new Swiper(".about-slider", {
       slidesPerView: 'auto',
       spaceBetween: 65,
-    
-      //centeredSlides: true,
       navigation: {
         nextEl: ".about-slider__btn--next",
         prevEl: ".about-slider__btn--prev",
@@ -129,7 +129,7 @@ window.addEventListener('scroll', headerScroll);
   const mediaSwiper = new Swiper('.media-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
-  
+    centeredSlides: false,
     navigation: {
       nextEl: '.media-slider__btn--next',
       prevEl: '.media-slider__btn--prev'
@@ -140,7 +140,6 @@ window.addEventListener('scroll', headerScroll);
       }
     }
   });
-
 
 
   // табы
@@ -218,10 +217,15 @@ fetch("./lang/lang.json")
   if (lang === "ar") {
     document.documentElement.classList.add("arabic");
     document.documentElement.setAttribute("dir", "rtl");
+    aboutSlider.changeLanguageDirection("rtl");
+    mediaSwiper.changeLanguageDirection("rtl");
   } else {
     document.documentElement.classList.remove("arabic");
     document.documentElement.removeAttribute("dir");
+    aboutSlider.changeLanguageDirection("ltr");
+    mediaSwiper.changeLanguageDirection("ltr");
   }
+
 }
 
 

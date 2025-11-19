@@ -112,7 +112,7 @@ html[dir="rtl"] {
       &__controls {
         margin-left: 0;
         margin-right: auto;
-        
+        flex-direction: row-reverse
       }
 /*       &__btn {
         &--nex {
@@ -128,8 +128,22 @@ html[dir="rtl"] {
       transform: scale3d(-1, 1, 1);
       background-size: auto;
     }
+    &__lisd {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    .projects-card__link.visit.btn {
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
   }
   .media {
+    .vedio-card {
+      background-image: image-set(url('../images/content/isaDagestani-video-rtl.jpg') 1x,
+      url('../images/content/isaDagestani-video-2x-rtl.jpg') 2x);
+      background-image: url('../images/content/isaDagestani-video-rtl.avif');
+    }
     .vedio-card__link {
       .icon {
         transform: scale3d(-1, 1, 1);

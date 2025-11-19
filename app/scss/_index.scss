@@ -142,11 +142,14 @@
     right: 0;
     left: 0; */
     }
-  
+  &__about-img-wrap {
+    height: 100%;
+    width: 100%;
+  }
   &__about-img {
     max-width: 596px;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     z-index: 1;
   }
@@ -633,7 +636,9 @@
     }
   }
   .vedio-card {
-    background-image: url('../images/content/isaDagestani-video.jpg');
+    background-image: image-set(url('../images/content/isaDagestani-video-desktop.jpg') 1x,
+    url('../images/content/isaDagestani-video-2x.jpg') 2x);
+    background-image: url('../images/content/isaDagestani-video.avif');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -996,7 +1001,7 @@ html[dir="rtl"] .faq__question {
 @media (max-width: 576px) {
   .hero {
     &__title {
-      font-size: 58px;
+     // font-size: 58px;
       margin-bottom: 20px;
     }
     .card {
@@ -1070,7 +1075,7 @@ html[dir="rtl"] .faq__question {
 @media (max-width: 440px) {
   .hero {
       &__title {
-        font-size: 45px;
+        font-size: 50px;
       }
       &__tags {
         bottom: 50px;
@@ -1091,7 +1096,7 @@ html[dir="rtl"] .faq__question {
     .card {
       padding: 40px 10px 10px 10px;
       &__title {
-        font-size: 30px;
+        font-size: 37px;
       }
     }
   }

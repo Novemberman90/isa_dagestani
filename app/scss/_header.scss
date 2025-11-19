@@ -166,6 +166,7 @@
     z-index: 25;
     span {
       width: 100%;
+      min-width: 100%;
       height: 3px;
       background-color: $white-400;
       transition: opacity .3s ease;
@@ -196,7 +197,7 @@
     &--active {
       span {
         width: 0; // центральная линия скрывается
-
+        min-width: 0;
         &::before {
           top: 50%;
           left: 50%;
