@@ -4,6 +4,9 @@
   position: relative;
   background-color: $dark-hero;
   z-index: 0;
+  span {
+    display: block;
+  }
   &::after {
     position: absolute;
     content: '';
@@ -638,7 +641,7 @@
   .vedio-card {
     background-image: image-set(url('../images/content/isaDagestani-video-desktop.jpg') 1x,
     url('../images/content/isaDagestani-video-2x.jpg') 2x);
-    background-image: url('../images/content/isaDagestani-video.avif');
+    background-image: url('../images/content/isaDagestani-video.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

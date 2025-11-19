@@ -116,7 +116,7 @@ window.addEventListener('scroll', headerScroll);
       breakpoints: {
         0: {
           slidesPerView: 'auto',
-          centeredSlides: false,
+          centeredSlides: true,
         },
 
         1400: {
