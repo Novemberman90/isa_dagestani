@@ -116,11 +116,11 @@ window.addEventListener('scroll', headerScroll);
       breakpoints: {
         0: {
           slidesPerView: 'auto',
-          centeredSlides: true,
+          //centeredSlides: true,
         },
 
         1400: {
-          centeredSlides: false,
+          //centeredSlides: false,
         }
       },
     });
@@ -222,8 +222,8 @@ fetch("./lang/lang.json")
   } else {
     document.documentElement.classList.remove("arabic");
     document.documentElement.removeAttribute("dir");
-    aboutSlider.changeLanguageDirection("ltr");
-    mediaSwiper.changeLanguageDirection("ltr");
+    aboutSlider.changeLanguageDirection("");
+    mediaSwiper.changeLanguageDirection("");
   }
 
 }

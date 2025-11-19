@@ -319,7 +319,7 @@
   &::after {
     position: absolute;
     content: '';
-    background-image: url('../images/content/projects-bg.svg');
+    background-image: url('../images/content/projects-bg.webp');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -641,7 +641,7 @@
   .vedio-card {
     background-image: image-set(url('../images/content/isaDagestani-video-desktop.jpg') 1x,
     url('../images/content/isaDagestani-video-2x.jpg') 2x);
-    background-image: url('../images/content/isaDagestani-video.jpg');
+    background-image: url('../images/content/isaDagestani-video-desktop.avif');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
