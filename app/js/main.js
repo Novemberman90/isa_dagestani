@@ -253,6 +253,16 @@ const updateContent = () => {
   });
 
 
-
+  /* Анимация */
+  //new WOW().init();
+  new WOW({
+  boxClass:     'wow',
+  animateClass: 'animated',
+  offset:       100,
+  mobile:       true,
+  live:         true,
+  callback: function(el) {
+    el.style.visibility = "visible";
+  }
+}).init();
 });
-
