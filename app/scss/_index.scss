@@ -18,7 +18,7 @@
     &::before {
       position: absolute;
       content: '';
-      background-image: url('../images/content/hero-bg-l.png');
+      background-image: url('../images/content/hero-bg-l.webp');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: left center;
@@ -31,7 +31,7 @@
     &::after{
       position: absolute;
       content: '';
-      background-image: url('../images/content/hero-bg-r.png');
+      background-image: url('../images/content/hero-bg-r.webp');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right center;
@@ -310,7 +310,7 @@
   &::after {
     position: absolute;
     content: '';
-    background-image: url('../images/content/projects-bg.png');
+    background-image: url('../images/content/projects-bg.webp');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -497,7 +497,7 @@
   &::before {
     position: absolute;
     content: '';
-    background-image: url('../images/content/media-bg.png');
+    background-image: url('../images/content/media-bg.webp');
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -872,7 +872,7 @@ html[dir="rtl"] .faq__question {
   }
   .media {
     &::before {
-      background-image: url('../images/content/media-bg-m.png');
+      background-image: url('../images/content/media-bg-m.webp');
       background-position: center center;
       top: auto;
       left: auto;
@@ -887,7 +887,7 @@ html[dir="rtl"] .faq__question {
   .projects {
     padding: 100px 0;
     &::after {
-      background-image: url('../images/content/projects-bg-m.png');
+      background-image: url('../images/content/projects-bg-m.webp');
       top: 330px;
       width: 614px;
       height: 980px;
@@ -912,7 +912,7 @@ html[dir="rtl"] .faq__question {
       }
 
       &::before {
-        background-image: url('../images/content/hero-bg-m.png');
+        background-image: url('../images/content/hero-bg-m.webp');
         background-position: left top;
         background-size: contain;
       }
