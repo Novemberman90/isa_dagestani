@@ -4,9 +4,6 @@
   position: relative;
   background-color: $dark-hero;
   z-index: 0;
-  span {
-    display: block;
-  }
   &::after {
     position: absolute;
     content: '';
@@ -633,9 +630,26 @@
     }
   }
   .vedio-card {
-    background-image: image-set(url('../images/content/isaDagestani-video-desktop.jpg') 1x,
-    url('../images/content/isaDagestani-video-2x.jpg') 2x);
-    background-image: url('../images/content/isaDagestani-video-desktop.avif');
+  /* Обычное изображение */
+    background-image: url('../images/content/isaDagestani-video.jpg');
+  
+    /* WebP если поддерживается */
+    @supports (background-image: url("image.webp")) {
+      background-image: url('../images/content/isaDagestani-video.webp');
+    }
+  
+    /* AVIF если поддерживается */
+    @supports (background-image: url("image.avif")) {
+      background-image: url('../images/content/isaDagestani-video.avif');
+    }
+  
+    /* RETINA 2x */
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+  
+      /* Retina JPEG */
+      background-image: url('../images/content/isaDagestani-video-2x.jpg');
+    }
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -674,7 +688,7 @@
   position: relative;
   z-index: 0;
   &__title {
-    font-size: 60px;
+    font-size: clamp(30px, 10vw, 60px);
     line-height: 1;
     text-align: center;
     margin-bottom: 50px;

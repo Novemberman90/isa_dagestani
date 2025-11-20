@@ -10,7 +10,8 @@
 
     "hero.name": "Isa",
     "hero.surname": "Dagestani",
-    "hero.subtitle": "A visionary building global products for millions.",
+    "hero.subtitle": "A visionary building global <span class='accent-text'>products for millions.</span>",
+
     "hero.tag1": "IT Entrepreneur",
     "hero.tag2": "Founder of UMMA Life",
     "hero.tag3": "Building the future for the Ummah",
@@ -105,7 +106,7 @@
 
     "hero.name": "Иса",
     "hero.surname": "Дагестани",
-    "hero.subtitle": "Видение, создающее глобальные продукты для миллионов.",
+    "hero.subtitle": "Визионер, создающий глобальные <span class='accent-text'>продукты для миллионов.</span>",
     "hero.tag1": "IT-предприниматель",
     "hero.tag2": "Основатель UMMA Life",
     "hero.tag3": "Создаю будущее для уммы",
@@ -199,7 +200,7 @@
 
     "hero.name": "عيسى",
     "hero.surname": "داغستاني",
-    "hero.subtitle": "رائد رؤيوي يبني منتجات عالمية لملايين المستخدمين.",
+    "hero.subtitle": "رؤيوي يخلق عالميًا <span class='accent-text'>لملايين الناس</span>",
     "hero.tag1": "رائد أعمال في تكنولوجيا المعلومات",
     "hero.tag2": "مؤسس أمة لايف",
     "hero.tag3": "نبني المستقبل للأمة",
