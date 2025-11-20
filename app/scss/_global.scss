@@ -34,14 +34,6 @@ a {
 }
 
 .icon {
-  path.inst-bg {
-    fill: #393939;
-  }
-  path.inst-fg {
-    fill: $white-400;
-  }
-}
-.icon {
   path.arrow {
     stroke: $white-400;
   }
@@ -50,6 +42,12 @@ a {
   display: flex;
   align-items: center;
   gap: 25px;
+  &__link {
+    border-radius: 50%;
+    &:hover {
+      outline: 1px solid $accent;
+    }
+  }
 }
 .contact-us {
   display: inline-flex;

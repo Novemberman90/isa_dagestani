@@ -103,43 +103,7 @@ window.addEventListener('scroll', headerScroll);
 
 
   //===== Slider ABOUT SECTION
-/* const isRTL = document.documentElement.getAttribute('dir') === 'rtl'; */
 
-
-  /*   let aboutSlider = new Swiper(".about-slider", {
-      slidesPerView: 'auto',
-      spaceBetween: 65,
-      navigation: {
-        nextEl: ".about-slider__btn--next",
-        prevEl: ".about-slider__btn--prev",
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 'auto',
-          //centeredSlides: true,
-        },
-
-        1400: {
-          //centeredSlides: false,
-        }
-      },
-    }); */
-
-//===== Slider MEDIA SECTION
-/*   const mediaSwiper = new Swiper('.media-slider', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    centeredSlides: false,
-    navigation: {
-      nextEl: '.media-slider__btn--next',
-      prevEl: '.media-slider__btn--prev'
-    },
-    on: {
-      slideChange: function () {
-        updateTabs(this.activeIndex);
-      }
-    }
-  }); */
 let aboutSlider;
 let mediaSwiper;
 

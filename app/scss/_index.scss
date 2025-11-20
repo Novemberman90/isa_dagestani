@@ -103,9 +103,9 @@
     }
     &__title {
       font-size: 32px;
-      line-height: 0.8;
+      line-height: 1;
       color: $dark-750;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       max-width: 435px;
     }
   
@@ -266,7 +266,7 @@
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      padding: 10px 0 0px 25px;
+      padding: 20px 0 0px 25px;
       border-radius: 30px;
       background-image: url('../images/content/about-card-bg.png');
       background-repeat: no-repeat;
@@ -279,12 +279,15 @@
     &__content {
       max-width: 330px;
       padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
     }
     &__title {
       color: $dark-750;
-      font-size: 28px;
-      line-height: 0.8;
-      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 1;
     }
   
     &__descr {

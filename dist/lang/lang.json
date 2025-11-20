@@ -56,6 +56,7 @@
     "media.tab-3": "Mention from Azon Global",
     "media.caption": "The future of the Muslim digital space",
 
+    "faq.title": "faq",
     "q1": "What is Umma Life?",
     "a1": "Umma Life is a global social network for Muslims, built around truth, freedom of speech and community connection. It focuses on communication, learning and growth within the Ummah.",
 
@@ -71,7 +72,7 @@
     "q5": "How can I contact Isa for collaboration or partnership?",
     "a5": "For partnership inquiries, collaboration opportunities, or direct communication with the principal figures behind the Umma ecosystem, including Isa Dagestani, it is highly recommended to use the official communication channels established by the project.This ensures that your proposal is professionally reviewed by the appropriate team and documented through the correct channels. Recommended Contact Methods: Official Partnership Form: The most effective way is typically through the dedicated Partnership or Collaboration Form available on the main Umma website. This ensures all necessary details about your proposal are gathered upfront. Business Development Email: Use the official email address designated for business inquiries and partnerships (e.g., partnerships@ummanetwork.io or bd@umma.finance). This is often monitored by the Business Development team. Official Social Channels: For general contact, you can reach out via official platforms like LinkedIn or Twitter (X), ensuring you message the official verified account of the Umma project or the founder (if publicly listed). Important Note: For security and verification purposes, avoid using unofficial personal emails or direct messages to unverified accounts. Always rely on the contact information explicitly provided on the official Umma ecosystem website or documentation.",
     
-
+    
     "name.logo-first": "Isa",
     "surname.logo-last": "Dagestani",
 
@@ -117,14 +118,14 @@
     "about.title": "Больше чем",
     "about.titledecor": "просто айти",
 
-    "about.card-1.title": "Где всё началось",
+    "about.card-1.title": "С чего всё началось",
     "about.card-1.text": "Я вырос в Дагестане, в городе Хасавюрт. Эти ценности сформировали мой взгляд и стали основой моих проектов. Последние 12 лет Турция стала моим вторым домом, где идеи становятся глобальными продуктами.",
 
     "about.card-2.title": "Технический путь, который привел к лидерству",
     "about.card-2.text": "Годы опыта в качестве системного инженера, программиста и специалиста по большим данным дали мне инструменты для создания, а не только для мечты. Сегодня, как основатель и генеральный директор, я создаю экосистему продуктов, трансформирующих цифровую жизнь глобального мусульманского сообщества.",
 
-    "about.card-3.title": "Миссия больше чем продукт",
-    "about.card-3.text": "В мире шума и цензуры я создаю платформы, основанные на правде и свободе слова. Моя миссия — дать умме инструменты для связи, образования и единства.",
+    "about.card-3.title": "Миссия больше, чем продукт",
+    "about.card-3.text": "В мире, полном шума и цензуры, я создаю платформы, основанные на правде и свободе слова. Моя миссия - наделить Умму инструментами для связи, образования и единства. Я лично инвестировал в Umma Life с первого дня, потому что верю в это всем сердцем.",
 
     "projects.pretitle": "Мои проекты",
     "projects.title": "Проекты",
@@ -150,6 +151,7 @@
     "media.tab-3": "Упоминание от Azon Global",
     "media.caption": "Будущее цифрового мусульманского пространства",
 
+    "faq.title": "Часто задаваемые вопросы",
     "q1": "Что такое Umma Life?",
     "a1": "Umma Life — глобальная социальная сеть для мусульман, основанная на правде, свободе слова и общении.",
 
