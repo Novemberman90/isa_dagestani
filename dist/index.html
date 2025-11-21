@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
@@ -216,7 +217,7 @@
       <p class="projects__pretitle wow animate__animated animate__fadeInDown" data-wow-delay=".2s" data-i18n="projects.pretitle">My Projects</p>
       <h2 class="projects__title title wow animate__animated animate__fadeInDown" data-wow-delay=".3s" data-i18n="projects.title">Projects</h2>
       <div class="projects__inner">
-        <div class="projects-card wow animate__animated animate__zoomIn" data-wow-delay=".5s">
+        <div class="projects-card wow animate__animated animate__zoomIn" data-wow-delay=".3s">
           <div class="projects-card__bg">
             <img src="./images/content/ulmalife.webp" alt="Umma Life">
           </div>
@@ -264,7 +265,7 @@
             </button>
           </div>
         </div>
-        <div class="projects-card wow animate__animated animate__zoomIn" data-wow-delay=".7s">
+        <div class="projects-card wow animate__animated animate__zoomIn" data-wow-delay=".5s">
           <div class="projects-card__bg">
             <img src="./images/content/project-card-2.webp" alt="Umma Projects Ecosystem">
           </div>
@@ -307,7 +308,11 @@
               <div class="swiper-slide media-slider__slide">
                 <div class="vedio-card">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"  href="#">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d href="https://www.youtube.com/watch?v=PUdyuKaGQd4"
+                    data-fancybox
+                    data-width="100%"
+                    data-height="100%"
+                      >
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
@@ -318,7 +323,8 @@
               <div class="swiper-slide media-slider__slide" loading="lazy">
                 <div class="vedio-card">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link" href="#">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d
+                      href="https://www.youtube.com/watch?v=PUdyuKaGQd4" data-fancybox data-width="100%" data-height="100%">
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
@@ -329,7 +335,8 @@
               <div class="swiper-slide media-slider__slide" loading="lazy">
                 <div class="vedio-card">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link" href="#">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d
+                      href="https://www.youtube.com/watch?v=PUdyuKaGQd4" data-fancybox data-width="100%" data-height="100%">
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
@@ -582,7 +589,7 @@
               <a href="#" class="footer__nav-link" data-i18n="footer.menu.terms">Terms & Conditionals</a>
             </li>
           </ul>
-          <a class="contact-us wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".7s" href="#contact" data-scroll>
+          <a class="contact-us" href="#contact" data-scroll>
             <p class="contact-us__title" data-i18n="footer.contact-btn">Свяжитесь с нами</p>
             <span class="contact-us__img">
               <svg class="icon" width="12" height="12">
@@ -601,6 +608,6 @@
 
 
   <script src="./js/main.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </body>
 </html>
