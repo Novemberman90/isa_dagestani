@@ -73,7 +73,7 @@ const observer = new IntersectionObserver((entries)=> {
     }
 
   });
-}, {threshold: 0.20} ); 
+}, {threshold: 0.3} ); 
 
 // Находим все элементы, за которыми будем следить, и подключаем их к Observer'у
 
@@ -265,4 +265,24 @@ const updateContent = () => {
     el.style.visibility = "visible";
   }
 }).init();
+
+
+// Also can pass in optional settings block
+  var rellax = new Rellax('.rellax', {
+    speed: -3,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+  const rellaxAbout = new Rellax('.rellax-projects', {
+    speed: -1,
+    center: true,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+   });
+
 });
