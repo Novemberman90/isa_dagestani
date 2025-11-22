@@ -277,7 +277,7 @@ const updateContent = () => {
     horizontal: false
   });
   const rellaxAbout = new Rellax('.rellax-projects', {
-    speed: -1,
+    speed: -3,
     center: true,
     wrapper: null,
     round: true,
