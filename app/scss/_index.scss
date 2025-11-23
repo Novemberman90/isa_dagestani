@@ -219,7 +219,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       width: fit-content;
       margin-left: auto;
       margin-top: 25px;
@@ -233,6 +233,8 @@
       padding: 20px;
       background-color: $liser-btn;
       border-radius: 50%;
+      outline-offset: 4px;
+      transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
       &--next {
         .icon {
           transform: rotate(45deg);
@@ -245,6 +247,17 @@
       }
       &.swiper-button-disabled {
         opacity: .5;
+      }
+      &:hover {
+        background-color: $accent;
+      }
+
+      &:focus {
+        outline: 1px solid $accent;
+      }
+
+      &:active {
+        opacity: 0.7;
       }
     }
   }
@@ -584,7 +597,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
       width: fit-content;
       margin-left: auto;
       margin-top: 85px;
@@ -615,6 +628,8 @@
       padding: 20px;
       background-color: $liser-btn;
       border-radius: 50%;
+      outline-offset: 4px;
+      transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
 
       &--next {
         .icon {
@@ -630,6 +645,17 @@
 
       &.swiper-button-disabled {
         opacity: .5;
+      }
+      &:hover {
+        background-color: $accent;
+      }
+
+      &:focus {
+        outline: 1px solid $accent;
+      }
+
+      &:active {
+        opacity: 0.7;
       }
     }
   }
@@ -735,6 +761,11 @@
        background: linear-gradient(180.00deg, rgba(249, 206, 134, 1), rgba(254, 227, 177, 1) 100%);
       }
     }
+    &:focus {
+      .faq__question-icon {
+        outline: 1px solid $accent;
+      }
+    }
   }
   &__question-label {
     text-align: left;
@@ -768,6 +799,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid $dark-700;
     .icon {
       transition: all .3s;
       transform: rotate(45deg);
@@ -1110,8 +1142,12 @@ html[dir="rtl"] .faq__question {
         gap: 30px;
         margin-bottom: 40px;
       }
+      &__item {
+        gap: 5px;
+      }
       &__controls {
         flex-wrap: wrap;
+        gap: 20px;
       }
       &__link {
         padding: 20px 10px;
