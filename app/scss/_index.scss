@@ -431,6 +431,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 5px;
+      z-index: 5;
     }
     &__link {
       padding: 20px 15px;
@@ -447,30 +448,31 @@
     }
     .visit {
       transition: all .3s;
-      &::after {
-        background-image: url("../images/content/ulmalife.webp");
-        background-position: left 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        position: absolute;
-        width: 50%;
-        top: 0;
-        left: 25px;
-        bottom: 0;
-        transition: all .3s;
-        opacity: 0;
-        z-index: -2;
+      &:hover ~ .visit-img {
+      transition: all .3s;
+      opacity: 1;
+      position: absolute;
+      width: 50%;
+      height: auto;
+      top: 50%;
+      bottom: auto;
+      left: 25px;
+      right: auto;
+      transform: translateY(-50%);
+      border-radius: 10px;
       }
-    
-      &:hover {
-        transition: all .3s;
-    
-        &::after {
-          opacity: 1;
-          z-index: 2;
-        }
-      }
+    }
+    .visit-img {
+      transition: all .3s;
+      opacity: 0;
+      position: absolute;
+      z-index: -2;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      height: 0;
     }
     &__link-title {
       &--tg {
@@ -490,6 +492,7 @@
     }
   }
 }
+
 
 .media {
   padding: 130px 0 65px;
@@ -838,6 +841,7 @@ html[dir="rtl"] .faq__question {
   }
  }
 }
+
 @media (max-width: 1200px) {
   .hero {
     &::after {
@@ -848,6 +852,11 @@ html[dir="rtl"] .faq__question {
       flex-direction: column;
       align-items: center;
       gap: 0;
+    }
+    &__wrapper {
+      &::after {
+        display: none;
+      }
     }
     &__content {
       margin-bottom: 25px;
@@ -904,7 +913,18 @@ html[dir="rtl"] .faq__question {
     }
   }
 }
-
+@media (max-width: 992px) {
+  .hero {
+    &__about {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__about-img {
+      max-width: 720px;
+      margin-left: auto;
+    }
+  }
+}
 @media (max-width: 880px) {
   .hero {
     &__wrapper {
@@ -1086,7 +1106,8 @@ html[dir="rtl"] .faq__question {
     }
     .projects-card {
       &__list {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 30px;
         margin-bottom: 40px;
       }
       &__controls {

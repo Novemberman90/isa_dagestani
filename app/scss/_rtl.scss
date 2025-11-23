@@ -8,41 +8,6 @@ html[dir="rtl"] {
   .header {
     .lang {
       flex-direction: row-reverse;
-      &__item {
-        &::after {
-          position: absolute;
-          content: '/';
-          color: $grey-500;
-          font-size: 24px;
-          right: 9px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &::before {
-          position: absolute;
-          content: '/';
-          color: $grey-500;
-          font-size: 24px;
-          left: 9px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-  
-        &:first-child {
-          padding: 0;
-          &::after,&::before {
-            display: none;
-          }
-        }
-  
-        &:last-child {
-          padding: 0;
-          &::after,&::before {
-            display: none;
-          }
-        }
-      }
-  
       &__option {
         font-weight: 400;
       }
@@ -194,6 +159,14 @@ html[dir="rtl"] {
         &.tag1 {
           left: 0px;
         }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .hero {
+      &__about-img {
+        margin-right: auto;
+        margin-left: 0;
       }
     }
   }

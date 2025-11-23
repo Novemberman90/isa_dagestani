@@ -74,11 +74,20 @@
             <p class="hero__subtitle rellax" data-rellax-speed="-3" data-i18n="hero.subtitle">A visionary building global<span class="accent-text" data-i18n="hero.subtitle.accent">products for millions.</span>
             </p>
           </div>
-          <div class="hero__about rellax" data-rellax-speed="3">
+          <div class="hero__about">
             <div class="hero__about-img-wrap">
               <picture>
+                <!-- Desktop / Tablet ≥1200 -->
+              <source media="(min-width: 880px)" srcset="./images/content/hero-hero.webp 1x, ./images/content/hero-hero-2x.webp 2x" type="image/webp">
+
+                  <!-- Tablet / Large mobile ≥576 -->
+                <source media="(min-width: 360px)" srcset="
+                      ./images/content/isaDagestani-mob.webp 1x,
+                      ./images/content/isaDagestani-mob-2x.webp 2x
+                    " type="image/webp">
+
                 <source srcset="./images/content/hero-hero.webp" type="image/webp">
-                <source srcset="./images/content/hero-hero.webp 1x, ./images/content/footer-hero@x2.png 2x" type="image/png">
+                <source  srcset="./images/content/hero-hero.webp 1x, ./images/content/footer-hero@x2.png 2x" type="image/png">
                 <img class="hero__about-img" src="./images/content/hero-hero.webp" alt="Isa Dagestani" loading="lazy">
               </picture>
             </div>
@@ -88,7 +97,7 @@
               <span class="hero__tag tag3 rellax" data-rellax-speed="1" data-i18n="hero.tag3">Building the future for the Ummah</span>
             </div>
           </div>
-          <div class="hero-card card rellax" data-rellax-speed="3" >
+          <div class="hero-card card rellax" data-rellax-speed="3" id="contact2">
             <div class="card__content">
               <h2 class="card__title title">
                 <span class="card__title-txt" data-i18n="hero.card.title1"></span>
@@ -138,7 +147,7 @@
   <section class="about" id="about">
     <div class="container">
       <p class="about__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="2" data-i18n="about.pretitle">About us</p>
-      <h2 class="about__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="-2">
+      <h2 class="about__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="2">
         <span data-i18n="about.title">More than</span>
         <span class="accent-text" data-i18n="about.titledecor">just IT</span>
       </h2>
@@ -215,8 +224,8 @@
   <section class="projects" id="projects">
     <div class="container">
       <p class="projects__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="projects.pretitle">My Projects</p>
-      <h2 class="projects__title rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="projects.title">Projects</h2>
-      <div class="projects__inner rellax" data-rellax-percentage="0.5" data-rellax-speed="-2">
+      <h2 class="projects__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="projects.title">Projects</h2>
+      <div class="projects__inner rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
         <div class="projects-card">
           <div class="projects-card__bg rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
             <img src="./images/content/ulmalife.webp" alt="Umma Life">
@@ -257,6 +266,7 @@
                 <use href="./images/sprite.svg#arrow"></use>
               </svg>
             </a>
+            <img class="visit-img" src="./images/content/ulmalife.webp" alt="">
             <button class="projects-card__link btn">
               <span class="projects-card__link-title" data-i18n="projects.card1.download">Download the app</span>
               <svg class="icon" width="16" height="16">
@@ -365,7 +375,7 @@
   <section class="faq" data-i18n-section="faq">
     <div class="container">
       <h2 class="faq__title title rellax" data-rellax-percentage="0.5"  data-rellax-speed="1" data-i18n="faq.title">Faq</h2>
-      <div class="faq__accordion rellax" data-rellax-percentage="0.5"  data-rellax-speed="-2">
+      <div class="faq__accordion rellax" data-rellax-percentage="0.5"  data-rellax-speed="1">
         <div class="faq__item"  data-accordion>
           <button class="faq__question" type="button">
             <span class="faq__question-label" data-i18n="q1">What is Umma Life?</span>
@@ -589,7 +599,7 @@
               <a href="#" class="footer__nav-link" data-i18n="footer.menu.terms">Terms & Conditionals</a>
             </li>
           </ul>
-          <a class="contact-us" href="#contact" data-scroll>
+          <a class="contact-us" href="#contact2">
             <p class="contact-us__title" data-i18n="footer.contact-btn">Свяжитесь с нами</p>
             <span class="contact-us__img">
               <svg class="icon" width="12" height="12">
