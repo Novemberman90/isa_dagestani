@@ -955,6 +955,9 @@ html[dir="rtl"] .faq__question {
       max-width: 720px;
       margin-left: auto;
     }
+    .card {
+      margin-top: -125px;
+    }
   }
 }
 @media (max-width: 880px) {
@@ -1002,6 +1005,7 @@ html[dir="rtl"] .faq__question {
       border-radius: 10px;
       display: flex;
       flex-direction: column;
+      margin-top: 0;
       &__title{
         font-size: 32px;
         max-width: 100%;
@@ -1082,9 +1086,6 @@ html[dir="rtl"] .faq__question {
     &__title {
      font-size: 58px;
       margin-bottom: 20px;
-    }
-    .card {
-      margin-top: 0;
     }
   }
   .about {
