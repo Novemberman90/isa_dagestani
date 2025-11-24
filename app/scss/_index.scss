@@ -45,7 +45,7 @@
   }
   &__inner {
     display: grid;
-    grid-template-columns: 800px auto;
+    grid-template-columns: clamp(750px, 60vw, 800px) auto;
     grid-template-areas:
       "content about"
       "card    about";
@@ -851,9 +851,12 @@ html[dir="rtl"] .faq__question {
 }
 @media (max-width: 1280px) {
  .hero {
-  padding-bottom: 0;
+
   &__title {
     font-size: 86px;
+  }
+  &__inner {
+    gap: 30px 20px;
   }
   &__tag {
     &.tag1 {
