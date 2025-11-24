@@ -64,6 +64,21 @@
     font-size: 20px;
     color: $white-400;
     line-height: 1;
+    border-radius: 30px;
+    outline-offset: 8px;
+    transition: color 0.3s, outline 0.3s, opacity 0.3s;
+  
+    &:hover {
+      color: $accent;
+    }
+  
+    &:focus {
+      outline: 1px solid $accent;
+    }
+  
+    &:active {
+      opacity: 0.7;
+    }
   }
   &__hero-block {
     position: relative;

@@ -101,26 +101,32 @@
 
   &__item {
     position: relative;
-    padding: 0 25px;
+    padding: 0 50px;
 
     &::after {
       position: absolute;
       content: '/';
       color: $grey-500;
       font-size: 20px;
-      right: -6px;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      position: absolute;
+      content: '/';
+      color: $grey-500;
+      font-size: 20px;
+      left: 25px;
       top: 50%;
       transform: translateY(-50%);
     }
 
-    &:first-child {
-      padding-left: 0;
-    }
-
+    &:first-child,
     &:last-child {
-      padding-right: 0;
-
-      &::after {
+      padding: 0;
+      &::after,
+      &::before {
         display: none;
       }
     }
@@ -131,9 +137,7 @@
     @include Gordita-400;
     color: $grey-500;
     outline-offset: 8px;
-    border-radius: 50%;
     transition: all .3s;
-
     &--active {
       color: $white-400;
     }
@@ -143,7 +147,9 @@
     }
 
     &:focus {
-      outline: 1px solid #F6AD32;
+      width: fit-content;
+      border-bottom: 1px solid #f6ad32;
+      border-radius: 0;
     }
 
     &:active {
@@ -153,45 +159,8 @@
 }
 
 
-@media (max-width: 1200px) {
-  .menu {
-    &__list {
-      gap: 10px;
-    }
 
-    &__link {
-      padding: 10px 30px;
-      font-size: 18px;
-    }
-  }
-
-  .lang {
-    &__option {
-      font-size: 18px;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .menu {
-    &__link {
-      padding: 10px 20px;
-      font-size: 18px;
-    }
-  }
-
-  .lang {
-    &__item {
-      padding-right: 20px;
-    }
-
-    &__option {
-      font-size: 18px;
-    }
-  }
-}
-
-@media (max-width: 880px) {
+@media (max-width: 1250px) {
   .header {
     padding: 40px 0 20px;
   }
@@ -332,16 +301,58 @@
 
   .lang {
     &__item {
-      padding: 0 30px;
+      padding: 0 60px;
 
-      &::after {
+      &::after,
+      &::before {
         font-size: 36px;
+      }
+      &::after {
+        right: 30px;
+      }
+      &::before {
+        left: 30px;
       }
     }
 
     &__option {
       font-size: 36px;
     }
+  }
+}
+@media (max-width: 1250px) and (orientation: landscape) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .menu__list {
+    gap: 7px;
+  }
+
+  .menu ul.menu__list {
+    padding: 0 20px;
+    margin-bottom: 10px;
+  }
+
+  .menu__nav {
+    padding-top: 70px;
+  }
+
+  .menu__btn {
+    height: 44px;
+  }
+
+  .menu__link {
+    padding: 10px 0;
+  }
+
+  .menu__btn--active span::after,
+  .menu__btn--active span::before {
+    width: 50%;
+  }
+
+  .lang__option {
+    font-size: 20px;
   }
 }
 
@@ -395,10 +406,19 @@
 
   .lang {
     &__item {
-      padding: 0 30px;
-
-      &::after {
+      padding: 0 40px;
+      
+      &::after,
+      &::before {
         font-size: 24px;
+      }
+    
+      &::after {
+        right: 20px;
+      }
+    
+      &::before {
+        left: 20px;
       }
     }
 
