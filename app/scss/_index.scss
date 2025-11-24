@@ -1157,6 +1157,9 @@ html[dir="rtl"] .faq__question {
         padding: 20px 10px;
         font-size: 18px;
       }
+     .visit:hover~.visit-img {
+        width: 60%;
+      }
     }
   }
 }
@@ -1169,6 +1172,9 @@ html[dir="rtl"] .faq__question {
         bottom: 50px;
       }
     }
+  .projects .projects-card .visit:hover~.visit-img {
+    width: 75%;
+  }
   .faq {
     padding: 100px 0;
     &__question {
@@ -1187,5 +1193,9 @@ html[dir="rtl"] .faq__question {
         font-size: 28px;
       }
     }
+  }
+  .projects .projects-card .visit:hover~.visit-img {
+    width: 100%;
+    left: 0;
   }
 }
