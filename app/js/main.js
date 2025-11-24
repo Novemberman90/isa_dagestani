@@ -62,18 +62,20 @@ const observer = new IntersectionObserver((entries)=> {
        document.querySelectorAll('.menu__link').forEach(item => {
         item.classList.remove('menu__link--active')
        });
+       
 
        // Находим ссылку, которая ведет к активному элементу
        const adctivLink = document.querySelector(`.menu__link[href="#${activeId}"]`);
 
        // Если такая ссылка существует, добавляем активный класс ее родителю (элементу списка)
        if(adctivLink) {
-        adctivLink.closest('.menu__link').classList.add('menu__link--active');
+        adctivLink.classList.add('menu__link--active');
        }
+       
     }
 
   });
-}, {threshold: 0.3} ); 
+}, {threshold: 0.5} ); 
 
 // Находим все элементы, за которыми будем следить, и подключаем их к Observer'у
 
