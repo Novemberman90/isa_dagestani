@@ -1085,12 +1085,9 @@
     &__title {
       margin-bottom: 50px;
     }
-
-    .media-tabs {
-      margin-bottom: 75px;
-
-      &__tab {
-        font-size: 14px;
+   .media-slider {
+    &__controls {
+        padding: 10px;
       }
     }
   }

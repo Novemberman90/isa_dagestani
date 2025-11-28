@@ -51,11 +51,18 @@
     "projects.card2.link": "@ummaprojects",
 
     "media.pretitle": "Media",
-    "media.title": "In the Media",
+    "media.title": "Media",
     "media.tab-1": "YouTube interview: ALIF TV",
     "media.tab-2": "World Blockchain Summit 2023",
     "media.tab-3": "Mention from Azon Global",
-    "media.caption": "The future of the Muslim digital space",
+    "media.caption-1": "The Development and Future of UMMA LIFE",
+    "media.caption-2": "UMMA LIFE — Islamic network for everyone",
+    "media.caption-3": "Q&A about UMMA LIFE",
+    "media.caption-4": "Ecosystem of UMMA Life",
+    "media.caption-5": "Security in UMMA LIFE",
+    "media.caption-6": "UMMA LIFE on the podcast “После намаза”",
+    "media.caption-7": "Earning with UMMA TOKEN",
+    "media.caption-8": "UMMA LIFE at Halal Expo 2023",
 
     "faq.title": "faq",
     "q1": "What is Umma Life?",
@@ -92,7 +99,11 @@
     "footer.menu.terms": "Terms & Conditions",
 
     "footer.contact-btn": "Contact us",
-    "footer.bg-title": "Isa Dagestani"
+    "footer.bg-title": "Isa Dagestani",
+
+    "links": {
+      "download_google": "https://play.google.com/store/search?q=umma%20life&c=apps&hl=en"
+    }
   },
 
   "ru": {
@@ -146,11 +157,15 @@
     "projects.card2.link": "@ummaprojects",
 
     "media.pretitle": "Медиа",
-    "media.title": "В медиа",
-    "media.tab-1": "Интервью YouTube: ALIF TV",
-    "media.tab-2": "World Blockchain Summit 2023",
-    "media.tab-3": "Упоминание от Azon Global",
-    "media.caption": "Будущее цифрового мусульманского пространства",
+    "media.title": "медиа",
+    "media.caption-1": "Путь развития и планы UMMA LIFE",
+    "media.caption-2": "Исламская соцсеть UMMA LIFE для всех",
+    "media.caption-3": "Вопрос-ответ об UMMA LIFE",
+    "media.caption-4": "ЭКОсистема Umma Life",
+    "media.caption-5": "Безопасность в UMMA LIFE",
+    "media.caption-6": "UMMA LIFE в подкасте «После намаза»",
+    "media.caption-7": "Заработок с UMMA TOKEN",
+    "media.caption-8": "UMMA LIFE на Halal Expo 2023",
 
     "faq.title": "Часто задаваемые вопросы",
     "q1": "Что такое Umma Life?",
@@ -186,8 +201,10 @@
     "footer.menu.terms": "Условия и положения",
 
     "footer.contact-btn": "Свяжитесь с нами",
-    "footer.bg-title": "Иса Дагестани"
-
+    "footer.bg-title": "Иса Дагестани",
+      "links": {
+      "download_google": "https://play.google.com/store/search?q=umma%20life&c=apps&hl=ru"
+    }
   },
   "ar": {
     "name.logo-first": "عيسى",
@@ -241,10 +258,14 @@
 
     "media.pretitle": "الإعلام",
     "media.title": "في وسائل الإعلام",
-    "media.tab-1": "مقابلات على يوتيوب: Alif TV",
-    "media.tab-2": "القمة العالمية للبلوكشين 2023",
-    "media.tab-3": "إشارة من Azon Global",
-    "media.caption": "مستقبل الفضاء الرقمي الإسلامي",
+    "media.caption-1": "تطور ومستقبل UMMA LIFE",
+    "media.caption-2": "Slide title 2",
+    "media.caption-3": "Slide title 3",
+    "media.caption-4": "نظام UMMA Life البيئي",
+    "media.caption-5": "Slide title 5",
+    "media.caption-6": "Slide title 6",
+    "media.caption-7": "Slide title 7",
+    "media.caption-8": "Slide title 8",
 
     "faq.title": "الأسئلة المتكررة",
     "q1": "ما هو Umma Life؟",
@@ -277,6 +298,9 @@
     "footer.menu.terms": "الشروط والأحكام",
 
     "footer.contact-btn": "تواصل معنا",
-    "footer.bg-title": "عيسى داغستاني"
+    "footer.bg-title": "عيسى داغستاني",
+    "links": {
+      "download_google": "https://play.google.com/store/search?q=umma%20life&c=apps&hl=ar"
+    }
   }
 }
