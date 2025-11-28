@@ -1,19 +1,68 @@
 @use 'importer' as *;
+
 html[dir="rtl"] {
   direction: rtl;
   text-align: right;
+
   body {
     font-family: 'Noto Sans Arabic', sans-serif !important;
   }
+
   .header {
     .lang {
       flex-direction: row-reverse;
+
+      &__item {
+        &::after {
+          position: absolute;
+          content: '/';
+          color: $grey-500;
+          font-size: 28px;
+          right: 21px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &::before {
+          position: absolute;
+          content: '/';
+          color: $grey-500;
+          font-size: 28px;
+          left: 21px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:first-child {
+
+          &::after,
+          &::before {
+            display: none;
+          }
+        }
+
+        &:last-child {
+
+          &::after,
+          &::before {
+            display: none;
+          }
+        }
+      }
+
       &__option {
         font-weight: 400;
       }
     }
   }
+
   .hero {
+    &__title {
+      line-height: 1;
+      span {
+        display: block;
+      }
+    }
 
     .card {
       background-image: url('../images/content/card-bgc-rtl.png');
@@ -26,100 +75,125 @@ html[dir="rtl"] {
         transform: scale3d(-1, 1, 1);
       }
     }
+
     &__about-img {
       transform: scale3d(-1, 1, 1);
     }
+
     &__tag {
       &.tag1 {
         left: -70px;
         right: auto;
         bottom: 50%;
       }
+
       &.tag2 {
         left: auto;
         right: -65px;
         bottom: 37%;
       }
+
       &.tag3 {
         width: 100%;
       }
     }
   }
+
   .media {
     .media-tabs {
       flex-wrap: wrap;
       flex-direction: row-reverse;
       justify-content: flex-end;
     }
+
     &::before {
+      top: 40%;
+      width: 80%;
       left: 0;
     }
+
     .media-slider {
       &__controls {
         flex-direction: row-reverse;
         margin-left: 0;
         margin-right: auto;
+        margin-top: 30px;
       }
     }
   }
+
   .about {
     &__title {
       max-width: 100%;
       text-align: center;
     }
+
     .card {
       transform: scale3d(-1, 1, 1);
+
       &__inner {
         flex-direction: row-reverse;
       }
+      &__content {
+        align-items: flex-end;
+        text-align: left;
+      }
     }
+
     .about-slider {
       &__controls {
         margin-left: 0;
         margin-right: auto;
         flex-direction: row-reverse
       }
-/*       &__btn {
-        &--nex {
-          .icon {
-            transform: rotate(-135deg);
-          }
-        }
-      } */
     }
   }
+
   .projects {
     &::after {
       transform: scale3d(-1, 1, 1);
       background-size: auto;
     }
+
     &__lisd {
       flex-direction: row-reverse;
       justify-content: flex-end;
     }
+
     .projects-card__link.visit.btn {
       .icon {
         transform: rotate(-90deg);
       }
     }
+    .projects-card__link-title--tg {
+      padding-right: 0;
+      padding-left: 45px;
+      &::after {
+        right: auto;
+        left: 0;
+      }
+    }
   }
+
   .media {
     .vedio-card {
-    @media (-webkit-min-device-pixel-ratio: 2),
+
+      @media (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi) {
         .hero {
           background-image: url('../images/content/isaDagestani-video-2x-rtl.jpg');
         }
-    
+
         @supports (background-image: url("image.avif")) {
           .hero {
             background-image: url('../images/content/isaDagestani-video-rtl.avif');
           }
         }
       }
-    
+
       background-image: url('../images/content/isaDagestani-video-rtl.jpg');
     }
+
     .vedio-card__link {
       .icon {
         transform: scale3d(-1, 1, 1);
@@ -127,17 +201,16 @@ html[dir="rtl"] {
       }
     }
   }
+
   .faq {
-    &__title {
+    .faq__question-label {
       text-align: right;
-    }
-    &__accordion {
-      margin: 0;
     }
     &__question-icon {
       .icon {
         transform: rotate(-135deg);
       }
+
       &--open {
         .icon {
           transform: rotate(-45deg);
@@ -145,13 +218,16 @@ html[dir="rtl"] {
       }
     }
   }
+
   .contact-us {
     &__img {
       .icon {
         transform: rotate(-90deg);
       }
     }
-  } 
+  }
+
+
 
   @media (max-width:1540px) {
     .hero {
@@ -162,6 +238,84 @@ html[dir="rtl"] {
       }
     }
   }
+  @media (max-width: 1400px) {
+    .hero {
+      .card {
+        min-height: 300px;
+      }
+      &__tag.tag2 {
+        right: 0px;
+      }
+    }
+  }
+  @media (max-width: 1250px) {
+    .menu__btn--active span::before {
+      left: 50%;
+      width: 100%;
+      right: auto;
+    }
+    .menu__btn--active span::after {
+      right: -50%;
+      left: auto;
+      width: 100%;
+    }
+    .footer__hero-title {
+      margin-top: -45px;
+    }
+  }
+  @media (max-width: 1250px) and (orientation: landscape) {
+  .menu__btn--active span::before {
+      left: 50%;
+      width: 50%;
+      right: auto;
+    }
+  
+    .menu__btn--active span::after {
+      right: 0%;
+      left: auto;
+      width: 50%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .media::before {
+      top: -38%;
+      width: 80%;
+      left: auto;
+      right: -4%;
+    }
+   }
+  @media (max-width: 880px) {
+    .menu {
+      &__btn {
+        span {
+          &::before {
+            left: auto;
+            right: 0; // зеркалим начальную позицию
+          }
+
+          &::after {
+            right: auto;
+            left: 0; // зеркалим начальную позицию
+          }
+        }
+
+        &--active {
+          span {
+            &::before {
+              left: 0;
+              right: auto;
+              transform: translate(-0%, -50%) rotate(45deg);
+            }
+
+            &::after {
+              transform: translate(0%, -50%) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 992px) {
     .hero {
       &__about-img {
@@ -170,32 +324,22 @@ html[dir="rtl"] {
       }
     }
   }
-  @media (max-width: 880px) {
-   .menu {
-     &__btn {
-        span{
-          &::before {
-            left: auto;
-            right: 0; // зеркалим начальную позицию
-          }
+  @media (max-width: 576px) {
+    .header {
+      .lang {
+        &__item {
           &::after {
-          right: auto;
-          left: 0; // зеркалим начальную позицию
-        }
-        }
-      &--active {
-        span {
-          &::before {
-            left: 0;
-            right: auto;
-            transform: translate(-0%, -50%) rotate(45deg);
+            right: 18px;
           }
-          &::after {
-            transform: translate(0%, -50%) rotate(-45deg);
+      
+          &::before {
+            left: 18px;
           }
         }
       }
     }
+    .media::before {
+      right: 0;
+    }
   }
- }
 }

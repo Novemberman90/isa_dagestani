@@ -32,11 +32,20 @@ dd {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font: inherit;
+}
+
 ul[class] {
   list-style: none;
 }
 
 img {
+  object-fit: cover;
+  height: auto;
   max-width: 100%;
   display: block;
 }
@@ -47,9 +56,14 @@ textarea,
 select {
   font: inherit;
 }
+
 button {
+  border: none;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+
 a {
   text-decoration: none;
+  color: inherit;
 }

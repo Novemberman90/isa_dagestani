@@ -1,619 +1,981 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isa Dagestani</title>
-  <meta name="description"
-    content="">
-  
+  <meta name="description" content="">
+  <title>
+    Isa Dagestani
+  </title>
+  <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Isa" />
+  <link rel="manifest" href="./images/favicon/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="preload" href="./fonts/Gordita-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/styles.min.css">
 </head>
+
 <body>
-<header class="header" id="header" data-i18n-section="header">
-  <div class="container">
-    <div class="header__inner">
-      <a class="logo" href="/" aria-label="Isa Dagestani logo">
-        <p class="logo__title" data-i18n="name.logo-first">Isa</p>
-        <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p>
-      </a>
-      <div class="menu">
-        <button class="menu__btn" type="button" aria-label="Button open / close menu">
-          <span></span>
-        </button>
-        <nav class="menu__nav" aria-label="Main menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="#about" class="menu__link" data-i18n="nav_about" data-scroll>About</a>
-            </li>
-            <li class="menu__item">
-              <a href="#projects" class="menu__link" data-i18n="nav_projects" data-scroll>Projects</a>
-            </li>
-            <li class="menu__item">
-              <a href="#media" class="menu__link" data-i18n="nav_media" data-scroll>Media</a>
-            </li>
-            <li class="menu__item">
-              <a href="#contact" class="menu__link" data-i18n="nav_contact" data-scroll>Contact</a>
-            </li>
-          </ul>
-          <ul class="lang">
-            <li class="lang__item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
-              <a href="#" class="lang__option lang__option--active" data-lang="en" aria-label="Switch language to English">EN</a>
-            </li>
-            <li class="lang__item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
-              <a href="#" class="lang__option" data-lang="ar" aria-label="Switch language to Arabic">AR</a>
-            </li>
-            <li class="lang__item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-              <a href="#" class="lang__option" data-lang="ru" aria-label="Switch language to Russian">RU</a>
-            </li>
-          </ul>
-        </nav>
+  <header class="header" id="header" data-i18n-section="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#header" aria-label="Isa Dagestani logo">
+          <p class="logo__title" data-i18n="name.logo-first">Isa</p>
+          <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p>
+        </a>
+        <div class="menu">
+          <button class="menu__btn" type="button" aria-label="Button open / close menu">
+            <span></span>
+          </button>
+          <nav class="menu__nav" aria-label="Main menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#about" class="menu__link" data-i18n="nav_about" data-scroll>About</a>
+              </li>
+              <li class="menu__item">
+                <a href="#projects" class="menu__link" data-i18n="nav_projects" data-scroll>Projects</a>
+              </li>
+              <li class="menu__item">
+                <a href="#media" class="menu__link" data-i18n="nav_media" data-scroll>Media</a>
+              </li>
+              <li class="menu__item">
+                <a href="#contact" class="menu__link" data-i18n="nav_contact" data-scroll>Contact</a>
+              </li>
+            </ul>
+            <ul class="lang">
+              <li class="lang__item">
+                <a href="#" class="lang__option lang__option--active" data-lang="en"
+                  aria-label="Switch language to English">EN</a>
+              </li>
+              <li class="lang__item">
+                <a href="#" class="lang__option" data-lang="ar" aria-label="Switch language to Arabic">AR</a>
+              </li>
+              <li class="lang__item">
+                <a href="#" class="lang__option" data-lang="ru" aria-label="Switch language to Russian">RU</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
-</header>
-
-<main class="main">
-  <section class="hero" id="hero">
-    <div class="hero__wrapper">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__content">
-            <h1 class="hero__title title rellax" data-rellax-speed="-3">
-              <span data-i18n="hero.name">Isa</span>
-              <span class="accent-text" data-i18n="hero.surname">Dagestani</span>
-            </h1>
-            <p class="hero__subtitle rellax" data-rellax-speed="-3" data-i18n="hero.subtitle">A visionary building global<span class="accent-text" data-i18n="hero.subtitle.accent">products for millions.</span>
-            </p>
-          </div>
-          <div class="hero__about">
-            <div class="hero__about-img-wrap">
-              <picture>
-                <!-- Desktop / Tablet ≥1200 -->
-              <source media="(min-width: 880px)" srcset="./images/content/hero-hero.webp 1x, ./images/content/hero-hero-2x.webp 2x" type="image/webp">
-
-                  <!-- Tablet / Large mobile ≥576 -->
-                <source media="(min-width: 360px)" srcset="
-                      ./images/content/isaDagestani-mob.webp 1x,
-                      ./images/content/isaDagestani-mob-2x.webp 2x
-                    " type="image/webp">
-
-                <source srcset="./images/content/hero-hero.webp" type="image/webp">
-                <source  srcset="./images/content/hero-hero.webp 1x, ./images/content/footer-hero@x2.png 2x" type="image/png">
-                <img class="hero__about-img" src="./images/content/hero-hero.webp" alt="Isa Dagestani" loading="lazy">
-              </picture>
-            </div>
-            <div class="hero__tags">
-              <span class="hero__tag tag1 rellax" data-rellax-speed="1" data-i18n="hero.tag1">IT Entrepreneur</span>
-              <span class="hero__tag tag2 rellax" data-rellax-speed="1" data-i18n="hero.tag2">Founder of UMMA Life</span>
-              <span class="hero__tag tag3 rellax" data-rellax-speed="1" data-i18n="hero.tag3">Building the future for the Ummah</span>
-            </div>
-          </div>
-          <div class="hero-card card rellax" data-rellax-speed="2" id="contact2">
-            <div class="card__content">
-              <h2 class="card__title title">
-                <span class="card__title-txt" data-i18n="hero.card.title1"></span>
-                <span class="card__title-txt card__title-txt--style" data-i18n="hero.card.title2"></span>
-              </h2>
-              <p class="card__descr" data-i18n="hero.card.text">
-                Creating platforms powered by truth, connection and freedom. <br>
-                My mission is to give the Ummah tools that inspire growth and unity.
+  </header>
+  <main class="main">
+    <section class="hero" id="hero">
+      <div class="hero__wrapper">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h1 class="hero__title title rellax" data-rellax-speed="-3">
+                <span data-i18n="hero.name">Isa</span>
+                <span class="accent-text" data-i18n="hero.surname">Dagestani</span>
+              </h1>
+              <p class="hero__subtitle rellax" data-rellax-speed="-3" data-i18n="hero.subtitle">A visionary building
+                global<span class="accent-text" data-i18n="hero.subtitle.accent">products for millions.</span>
               </p>
-              <ul class="social-list ">
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://www.instagram.com/isa_dagestani/" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon" width="47" height="47">
-                      <use href="./images/sprite.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://x.com/isa_dagestan" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon" width="47" height="47">
-                      <use href="./images/sprite.svg#x"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://t.me/isa_dagestan" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon" width="47" height="47">
-                      <use href="./images/sprite.svg#telegram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-list__item">
-                  <a class="social-list__link" href="https://www.linkedin.com/in/isadagestani/" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon" width="47" height="47">
-                      <use href="./images/sprite.svg#linkedIn"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </div>
-            <img class="card__img" src="./images/content/hero-card.webp" alt="Isa Dagestani">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="container">
-      <p class="about__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="2" data-i18n="about.pretitle">About us</p>
-      <h2 class="about__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="2">
-        <span data-i18n="about.title">More than</span>
-        <span class="accent-text" data-i18n="about.titledecor">just IT</span>
-      </h2>
-      <div class="about__inner">
-        <div class="swiper about-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="card__inner">
-                  <div class="card__content">
-                    <h2 class="card__title title" data-i18n="about.card-1.title">
-                      Where it <span class="accent-text">all began</span>
-                    </h2>
-                    <p class="card__descr" data-i18n="about.card-1.text">
-                      I grew up in Dagestan, in the city of Khasavyurt. These values shaped my worldview and became the foundation of my
-                      projects. For the last 12 years Türkiye has been my second home, where ideas turn into global products.
-                    </p>
-                  </div>
-                  <img class="card__img" src="./images/content/about-1.webp" alt="Where it all began">
-                </div>
+            <div class="hero__about">
+              <div class="hero__about-img-wrap">
+                <picture>
+                  <source
+                    srcset="./images/content/isaDagestani-mob.webp 1x, ./images/content/isaDagestani-mob-2x.webp 2x"
+                    type="image/webp" media="(max-width: 576px)">
+                  <source srcset="./images/content/isaDagestani-mob.png 1x, ./images/content/isaDagestani-mob-2x.png 2x"
+                    type="image/png" media="(max-width: 576px)">
+                  <source srcset="./images/content/isaDagestani.webp 1x, ./images/content/isaDagestani-2x.webp 2x"
+                    type="image/webp">
+                  <source srcset="./images/content/isaDagestani.png 1x, ./images/content/isaDagestani-2x.png 2x"
+                    type="image/png">
+                  <img class="hero__about-img" src="./images/content/isaDagestani.png" alt="Isa Dagestani" width="596"
+                    height="802">
+                </picture>
+              </div>
+              <div class="hero__tags">
+                <span class="hero__tag tag1 rellax" data-rellax-speed="1" data-i18n="hero.tag1">IT Entrepreneur</span>
+                <span class="hero__tag tag2 rellax" data-rellax-speed="1" data-i18n="hero.tag2">Founder of UMMA
+                  Life</span>
+                <span class="hero__tag tag3 rellax" data-rellax-speed="1" data-i18n="hero.tag3">Building the future for
+                  the
+                  Ummah</span>
               </div>
             </div>
-            <div class="swiper-slide"  loading="lazy">
-              <div class="card">
-                <div class="card__inner">
-                  <div class="card__content">
-                    <h2 class="card__title title" data-i18n="about.card-2.title">
-                      A technical path that led <span class="accent-text">to leadership</span>
-                    </h2>
-                    <p class="card__descr" data-i18n="about.card-2.text">
-                      ears of experience as a system engineer, programmer and Big Data specialist gave me the tools to build, not just dream.
-                      Today, as a founder and CEO, I create an ecosystem of products transforming the digital life of the global Muslim
-                      community.
-                    </p>
-                  </div>
-                  <img class="card__img" src="./images/content/about-2.webp" alt="A technical path that led to leadership">
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide" loading="lazy">
-              <div class="card">
-                <div class="card__inner">
-                  <div class="card__content">
-                    <h2 class="card__title title" data-i18n="about.card-3.title">
-                      A mission larger than <span class="accent-text">a product</span>
-                    </h2>
-                    <p class="card__descr" data-i18n="about.card-3.text">
-                      In a world full of noise and censorship, I build platforms based on truth and freedom of speech. My mission is to
-                      empower the Ummah with tools for connection, education and unity. I personally invested in Umma Life from day one
-                      because I believe in it with all my heart.
-                    </p>
-                  </div>
-                  <img class="card__img" src="./images/content/about-3.webp" alt="A mission larger than a product">
-                </div>
+            <div class="hero-card card rellax" data-rellax-speed="2">
+              <div class="card__content">
+                <h2 class="card__title title">
+                  <span class="card__title-txt" data-i18n="hero.card.title1"></span>
+                  <span class="card__title-txt card__title-txt--style" data-i18n="hero.card.title2"></span>
+                </h2>
+                <p class="card__descr" data-i18n="hero.card.text">
+                  Creating platforms powered by truth, connection and freedom. <br>
+                  My mission is to give the Ummah tools that inspire growth and unity.
+                </p>
+                <ul class="social-list" id="contact2">
+                  <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.instagram.com/isa_dagestani/" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="icon" width="47" height="47">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                      <span class="visually-hidden">
+                        go to Isa Dagestani’s Instagram
+                      </span>
+                    </a>
+                  </li>
+                  <li class="social-list__item">
+                    <a class="social-list__link" href="https://x.com/isa_dagestan" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="icon" width="47" height="47">
+                        <use href="./images/sprite.svg#x"></use>
+                      </svg>
+                      <span class="visually-hidden">
+                        go to Isa Dagestani’s X profile
+                      </span>
+                    </a>
+                  </li>
+                  <li class="social-list__item">
+                    <a class="social-list__link" href="https://t.me/isa_dagestan" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="icon" width="47" height="47">
+                        <use href="./images/sprite.svg#telegram"></use>
+                      </svg>
+                      <span class="visually-hidden">
+                        go to Isa Dagestani’s Telegram
+                      </span>
+                    </a>
+                  </li>
+                  <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/isadagestani/" target="_blank"
+                      rel="noopener noreferrer">
+                      <svg class="icon" width="47" height="47">
+                        <use href="./images/sprite.svg#linkedIn"></use>
+                      </svg>
+                      <span class="visually-hidden">
+                        go to Isa Dagestani’s linkedin profile
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <div class="about-slider__controls">
-            <div class="about-slider__btn about-slider__btn--prev swiper-button-disabled">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </div>
-            <div class="about-slider__btn about-slider__btn--next">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
+              <img class="card__img" src="./images/content/hero-card.webp" alt="Isa Dagestani" loading="lazy">
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="projects" id="projects">
-    <div class="container">
-      <p class="projects__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="projects.pretitle">My Projects</p>
-      <h2 class="projects__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="projects.title">Projects</h2>
-      <div class="projects__inner rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
-        <div class="projects-card">
-          <div class="projects-card__bg rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
-            <img src="./images/content/ulmalife.webp" alt="Umma Life">
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <p class="about__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="2" data-i18n="about.pretitle">
+          About us</p>
+        <h2 class="about__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="2">
+          <span data-i18n="about.title">More than</span>
+          <span class="accent-text" data-i18n="about.titledecor">just IT</span>
+        </h2>
+        <div class="about__inner">
+          <div class="swiper about-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" loading="lazy">
+                <div class="card">
+                  <div class="card__inner">
+                    <div class="card__content">
+                      <h2 class="card__title title" data-i18n="about.card-1.title">
+                        Where it <span class="accent-text">all began</span>
+                      </h2>
+                      <p class="card__descr" data-i18n="about.card-1.text">
+                        I grew up in Dagestan, in the city of Khasavyurt. These values shaped my worldview and became
+                        the
+                        foundation of my
+                        projects. For the last 12 years Türkiye has been my second home, where ideas turn into global
+                        products.
+                      </p>
+                    </div>
+                    <img class="card__img" src="./images/content/about-1.webp" alt="Where it all began">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" loading="lazy">
+                <div class="card">
+                  <div class="card__inner">
+                    <div class="card__content">
+                      <h2 class="card__title title" data-i18n="about.card-2.title">
+                        A technical path that led <span class="accent-text">to leadership</span>
+                      </h2>
+                      <p class="card__descr" data-i18n="about.card-2.text">
+                        ears of experience as a system engineer, programmer and Big Data specialist gave me the tools to
+                        build, not just dream.
+                        Today, as a founder and CEO, I create an ecosystem of products transforming the digital life of
+                        the
+                        global Muslim
+                        community.
+                      </p>
+                    </div>
+                    <img class="card__img" src="./images/content/about-2.webp"
+                      alt="A technical path that led to leadership">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" loading="lazy">
+                <div class="card">
+                  <div class="card__inner">
+                    <div class="card__content">
+                      <h2 class="card__title title" data-i18n="about.card-3.title">
+                        A mission larger than <span class="accent-text">a product</span>
+                      </h2>
+                      <p class="card__descr" data-i18n="about.card-3.text">
+                        In a world full of noise and censorship, I build platforms based on truth and freedom of speech.
+                        My
+                        mission is to
+                        empower the Ummah with tools for connection, education and unity. I personally invested in Umma
+                        Life
+                        from day one
+                        because I believe in it with all my heart.
+                      </p>
+                    </div>
+                    <img class="card__img" src="./images/content/about-3.webp" alt="A mission larger than a product">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-slider__controls">
+              <button class="about-slider__btn about-slider__btn--prev swiper-button-disabled">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Go to previous slide
+                </span>
+              </button>
+              <button class="about-slider__btn about-slider__btn--next">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Go to next slide
+                </span>
+              </button>
+            </div>
           </div>
-          <div class="projects-card__content" >
-            <h3 class="projects-card__title" data-i18n="projects.card1.title">
-              Umma Life
-            </h3>
-            <p class="projects-card__sub-title" data-i18n="projects.card1.subtitle">A global social network for Muslims</p>
-            <p class="projects-card__descr" data-i18n="projects.card1.descr">
-              A platform built on freedom, truth and community. Designed for communication, learning and growth within the Ummah.
-            </p>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <div class="container">
+        <p class="projects__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="1"
+          data-i18n="projects.pretitle">My Projects</p>
+        <h2 class="projects__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="1"
+          data-i18n="projects.title">Projects</h2>
+        <div class="projects__inner rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
+          <div class="projects-card">
+            <div class="projects-card__bg rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
+              <img src="./images/content/ulmalife.webp" alt="Umma Life">
+            </div>
+            <div class="projects-card__content">
+              <h3 class="projects-card__title" data-i18n="projects.card1.title">
+                Umma Life
+              </h3>
+              <p class="projects-card__sub-title" data-i18n="projects.card1.subtitle">A global social network for
+                Muslims
+              </p>
+              <p class="projects-card__descr" data-i18n="projects.card1.descr">
+                A platform built on freedom, truth and community. Designed for communication, learning and growth within
+                the
+                Ummah.
+              </p>
+            </div>
+            <ul class="projects-card__list">
+              <li class="projects-card__item">
+                <svg class="icon" width="29" height="29">
+                  <use href="./images/sprite.svg#check-mark"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list1">No censorship</p>
+              </li>
+              <li class="projects-card__item">
+                <svg class="icon" width="31" height="28">
+                  <use href="./images/sprite.svg#secret"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list2">Only truth</p>
+              </li>
+              <li class="projects-card__item">
+                <svg class="icon" width="30" height="28">
+                  <use href="./images/sprite.svg#signal"></use>
+                </svg>
+                <p class="projects-card__item-txt" data-i18n="projects.card1.list3">One Ummah, one network</p>
+              </li>
+            </ul>
+            <div class="projects-card__controls">
+              <a class="projects-card__cta visit btn" href="https://ummalife.com/" target="_blank">
+                <span class="projects-card__link-title" data-i18n="projects.card1.visit">Visit ummalife.com</span>
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
+              <img class="visit-img" src="./images/content/ulmalife.webp" alt="">
+              <div class="projects-card__links">
+                <a class="projects-card__link" href="https://apps.apple.com/us/app/umma-life/id6445799081#information"
+                  target="_blank">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g data-figma-bg-blur-radius="128.571">
+                      <rect width="60" height="60" rx="23.1429" fill="white" fill-opacity="0.12" />
+                      <rect width="60" height="60" rx="23.1429" fill="url(#paint0_linear_4306_24989)" />
+                      <rect x="0.642857" y="0.642857" width="58.7143" height="58.7143" rx="22.5"
+                        stroke="url(#paint1_linear_4306_24989)" stroke-opacity="0.3" stroke-width="1.28571" />
+                      <path
+                        d="M39.7233 29.9851C39.7418 28.5548 40.1217 27.1524 40.8277 25.9084C41.5338 24.6644 42.5431 23.6192 43.7616 22.87C42.9875 21.7645 41.9663 20.8546 40.779 20.2128C39.5918 19.571 38.2712 19.2148 36.9222 19.1726C34.0446 18.8705 31.2549 20.8945 29.7885 20.8945C28.2938 20.8945 26.0361 19.2026 23.6049 19.2526C22.0323 19.3034 20.4998 19.7607 19.1565 20.5799C17.8132 21.3991 16.705 22.5523 15.94 23.9271C12.6259 29.6651 15.0979 38.098 18.2726 42.7361C19.8609 45.0073 21.7173 47.5442 24.1463 47.4543C26.5232 47.3557 27.4109 45.9386 30.28 45.9386C33.1225 45.9386 33.9554 47.4543 36.4337 47.3971C38.9842 47.3557 40.5912 45.1158 42.1238 42.8232C43.2651 41.2049 44.1433 39.4163 44.7258 37.5237C43.2441 36.897 41.9795 35.848 41.0899 34.5074C40.2004 33.1668 39.7251 31.594 39.7233 29.9851Z"
+                        fill="white" />
+                      <path
+                        d="M35.0419 16.1228C36.4326 14.4533 37.1177 12.3075 36.9518 10.1411C34.8272 10.3643 32.8646 11.3797 31.4552 12.9851C30.7661 13.7693 30.2383 14.6817 29.902 15.6701C29.5657 16.6585 29.4275 17.7034 29.4953 18.7453C30.558 18.7562 31.6093 18.5259 32.5701 18.0716C33.5308 17.6173 34.376 16.951 35.0419 16.1228V16.1228Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="bgblur_0_4306_24989_clip_path" transform="translate(128.571 128.571)">
+                        <rect width="60" height="60" rx="23.1429" />
+                      </clipPath>
+                      <linearGradient id="paint0_linear_4306_24989" x1="2.95358" y1="3.33025" x2="30" y2="31.2"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#B1B1B1" stop-opacity="0.2" />
+                        <stop offset="1" stop-color="#363567" stop-opacity="0.1" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_4306_24989" x1="-12.64" y1="-4.32266" x2="3.61549" y2="72.2372"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="white" stop-opacity="0.2" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="visually-hidden">
+                    Go to download Umma Life on the App Store
+                  </span>
+                </a>
+                <a class="projects-card__link" data-i18n-link="links.download_google" href=""
+                  target="_blank">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g data-figma-bg-blur-radius="128.571">
+                      <rect width="60" height="60" rx="23.1429" fill="white" fill-opacity="0.12" />
+                      <rect width="60" height="60" rx="23.1429" fill="url(#paint0_linear_4306_24994)" />
+                      <rect x="0.642857" y="0.642857" width="58.7143" height="58.7143" rx="22.5"
+                        stroke="url(#paint1_linear_4306_24994)" stroke-opacity="0.3" stroke-width="1.28571" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.8804 12.4117C15.456 12.8708 15.2109 13.5724 15.2109 14.4906V47.0598C15.2109 47.9781 15.456 48.6796 15.895 49.1204L16.0084 49.2196L34.1814 30.9717V30.564L15.9938 12.3125L15.8804 12.4117Z"
+                        fill="url(#paint2_linear_4306_24994)" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M40.2283 37.0725L34.167 30.9862V30.5602L40.2283 24.4739L40.36 24.5547L47.5298 28.6465C49.5819 29.8072 49.5819 31.7245 47.5298 32.8999L40.36 36.9917L40.2283 37.0725Z"
+                        fill="url(#paint3_linear_4306_24994)" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M40.3603 36.9912L34.1672 30.7727L15.8809 49.1344C16.5503 49.8543 17.6733 49.9351 18.928 49.2336L40.3603 36.9912Z"
+                        fill="url(#paint4_linear_4306_24994)" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M40.3603 24.5546L18.928 12.3306C17.6733 11.6106 16.5466 11.7098 15.8809 12.4297L34.1672 30.7731L40.3603 24.5546Z"
+                        fill="url(#paint5_linear_4306_24994)" />
+                      <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M40.2287 36.8596L18.9426 49.0028C17.7538 49.6896 16.693 49.6419 16.0089 49.0175L15.8955 49.1313L16.0089 49.2305C16.693 49.8512 17.7538 49.9027 18.9426 49.2158L40.375 36.9918L40.2287 36.8596Z"
+                        fill="black" />
+                      <path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M47.5296 32.6864L40.21 36.859L40.3416 36.9912L47.5113 32.8994C48.5392 32.3117 49.044 31.5404 49.044 30.7727C48.9819 31.4779 48.4588 32.1464 47.5296 32.6864Z"
+                        fill="black" />
+                      <path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.9275 12.5439L47.5294 28.8597C48.4586 29.385 48.9817 30.0718 49.0621 30.7734C49.0621 30.0057 48.5573 29.2344 47.5294 28.6467L18.9275 12.3309C16.8753 11.1518 15.2109 12.1362 15.2109 14.4906V14.7037C15.2109 12.3456 16.8753 11.3795 18.9275 12.5439Z"
+                        fill="black" />
+                    </g>
+                    <defs>
+                      <clipPath id="bgblur_0_4306_24994_clip_path" transform="translate(128.571 128.571)">
+                        <rect width="60" height="60" rx="23.1429" />
+                      </clipPath>
+                      <linearGradient id="paint0_linear_4306_24994" x1="2.95358" y1="3.33025" x2="30" y2="31.2"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#B1B1B1" stop-opacity="0.2" />
+                        <stop offset="1" stop-color="#363567" stop-opacity="0.1" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_4306_24994" x1="-12.64" y1="-4.32266" x2="3.61549" y2="72.2372"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" stop-opacity="0.8" />
+                        <stop offset="1" stop-color="white" stop-opacity="0.2" />
+                      </linearGradient>
+                      <linearGradient id="paint2_linear_4306_24994" x1="32.5513" y1="14.1392" x2="3.42549" y2="21.868"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00A0FF" />
+                        <stop offset="0.00657" stop-color="#00A1FF" />
+                        <stop offset="0.2601" stop-color="#00BEFF" />
+                        <stop offset="0.5122" stop-color="#00D2FF" />
+                        <stop offset="0.7604" stop-color="#00DFFF" />
+                        <stop offset="1" stop-color="#00E3FF" />
+                      </linearGradient>
+                      <linearGradient id="paint3_linear_4306_24994" x1="50.206" y1="30.7733" x2="14.7123" y2="30.7733"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFE000" />
+                        <stop offset="0.4087" stop-color="#FFBD00" />
+                        <stop offset="0.7754" stop-color="#FFA500" />
+                        <stop offset="1" stop-color="#FF9C00" />
+                      </linearGradient>
+                      <linearGradient id="paint4_linear_4306_24994" x1="36.9927" y1="34.1565" x2="13.4811" y2="73.5662"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF3A44" />
+                        <stop offset="1" stop-color="#C31162" />
+                      </linearGradient>
+                      <linearGradient id="paint5_linear_4306_24994" x1="11.2761" y1="1.57834" x2="21.7657" y2="19.1794"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#32A071" />
+                        <stop offset="0.0685" stop-color="#2DA771" />
+                        <stop offset="0.4762" stop-color="#15CF74" />
+                        <stop offset="0.8009" stop-color="#06E775" />
+                        <stop offset="1" stop-color="#00F076" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span class="visually-hidden">
+                    Go to download Umma Life on Google Play
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
-          <ul class="projects-card__list">
-            <li class="projects-card__item">
-              <svg class="icon" width="29" height="29">
-                <use href="./images/sprite.svg#check-mark"></use>
-              </svg>
-              <p class="projects-card__item-txt" data-i18n="projects.card1.list1">No censorship</p>
-            </li>
-            <li class="projects-card__item">
-              <svg class="icon" width="31" height="28">
-                <use href="./images/sprite.svg#secret"></use>
-              </svg>
-              <p class="projects-card__item-txt" data-i18n="projects.card1.list2">Only truth</p>
-            </li>
-            <li class="projects-card__item">
-              <svg class="icon" width="30" height="28">
-                <use href="./images/sprite.svg#signal"></use>
-              </svg>
-              <p class="projects-card__item-txt" data-i18n="projects.card1.list3">One Ummah, one network</p>
-            </li>
-          </ul>
-          <div class="projects-card__controls">
-            <a class="projects-card__link visit btn" href="#" target="_blank">
-              <span class="projects-card__link-title" data-i18n="projects.card1.visit">Visit ummalife.com</span>
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
+          <div class="projects-card">
+            <div class="projects-card__bg rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
+              <img src="./images/content/project-card-2.webp" alt="Umma Projects Ecosystem">
+            </div>
+            <div class="projects-card__content">
+              <h3 class="projects-card__title" data-i18n="projects.card2.title">
+                Umma Projects Ecosystem
+              </h3>
+              <p class="projects-card__sub-title" data-i18n="projects.card2.subtitle">Beyond one platform</p>
+              <p class="projects-card__descr" data-i18n="projects.card2.descr">
+                An ecosystem of products supporting the Muslim community worldwide, from media to education.
+              </p>
+            </div>
+            <a class="projects-card__cta btn " href="https://t.me/ummaprojects" target="_blank">
+              <span class="projects-card__link-title projects-card__link-title--tg"
+                data-i18n="projects.card2.link">@ummaprojects</span>
+              <span class="visually-hidden">
+                Go to the Ummah Projects platform
+              </span>
             </a>
-            <img class="visit-img" src="./images/content/ulmalife.webp" alt="">
-            <button class="projects-card__link btn">
-              <span class="projects-card__link-title" data-i18n="projects.card1.download">Download the app</span>
-              <svg class="icon" width="16" height="16">
-                <use href="./images/sprite.svg#download"></use>
-              </svg>
-            </button>
           </div>
-        </div>
-        <div class="projects-card">
-          <div class="projects-card__bg rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
-            <img src="./images/content/project-card-2.webp" alt="Umma Projects Ecosystem">
-          </div>
-          <div class="projects-card__content">
-            <h3 class="projects-card__title" data-i18n="projects.card2.title">
-              Umma Projects Ecosystem
-            </h3>
-            <p class="projects-card__sub-title" data-i18n="projects.card2.subtitle">Beyond one platform</p>
-            <p class="projects-card__descr" data-i18n="projects.card2.descr">
-              An ecosystem of products supporting the Muslim community worldwide, from media to education.
-            </p>
-          </div>
-          <a class="projects-card__link btn " href="https://t.me/ummaprojects" target="_blank">
-            <span class="projects-card__link-title projects-card__link-title--tg" data-i18n="projects.card2.link">@ummaprojects</span>
-          </a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="media" id="media">
-    <div class="container">
-      <p class="media__pretitle rellax" data-rellax-percentage="0.5"  data-rellax-speed="1"   data-i18n="media.pretitle">Media</p>
-      <h2 class="media__title title rellax" data-rellax-percentage="0.5"  data-rellax-speed="1"  data-i18n="media.title">
-      In the Media
-      </h2>
-      <div class="media__inner rellax" data-rellax-percentage="0.5"  data-rellax-speed="1">
-        <div class="media-tabs rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
-          <button class="media-tabs__tab media-tabs__tab--active" data-index="0" data-i18n="media.tab-1">
-            YouTube interview: ALIF TV
-          </button>
-          <button class="media-tabs__tab" data-index="1" data-i18n="media.tab-2">
-            World Blockchain Summit 2023
-          </button>
-          <button class="media-tabs__tab" data-index="2" data-i18n="media.tab-3">
-            Mention from Azon Global
-          </button>
-        </div>
+    </section>
+    <section class="media" id="media">
+      <div class="container">
+        <p class="media__pretitle rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="media.pretitle">
+          Media</p>
+        <h2 class="media__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="1"
+          data-i18n="media.title">
+          Media
+        </h2>
+        <div class="media__inner rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
           <div class="swiper media-slider">
             <div class="swiper-wrapper">
-              <div class="swiper-slide media-slider__slide">
+              <div class="swiper-slide media-slider__slide" data-show="not-ar">
                 <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/TheDevelopmentAndFutureOfUMMA LIFE.webp"
+                    alt="The Development and Future of UMMA LIFE">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d href="https://www.youtube.com/watch?v=PUdyuKaGQd4"
-                    data-fancybox
-                    data-width="100%"
-                    data-height="100%"
-                      >
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=zCcwBLpgqn8&t=7s" data-fancybox data-width="100%"
+                      data-height="100%">
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
                     </a>
                   </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-1">The Development and Future of UMMA LIFE
+                  </p>
                 </div>
               </div>
-              <div class="swiper-slide media-slider__slide" loading="lazy">
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
                 <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/UMMALIFEIslamicNetworkForEveryone.webp"
+                    alt="The Development and Future of UMMA LIFE">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d
-                      href="https://www.youtube.com/watch?v=PUdyuKaGQd4" data-fancybox data-width="100%" data-height="100%">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=buJm9AvK4Is" data-fancybox data-width="100%"
+                      data-height="100%">
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
                     </a>
                   </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-2">UMMA LIFE — Islamic network for everyone
+                  </p>
                 </div>
               </div>
-              <div class="swiper-slide media-slider__slide" loading="lazy">
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
                 <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/Q&AaboutUMMALIFE.webp"
+                    alt="The Development and Future of UMMA LIFE">
                   <div class="vedio-card__popup">
-                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s" d
-                      href="https://www.youtube.com/watch?v=PUdyuKaGQd4" data-fancybox data-width="100%" data-height="100%">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=uwAJ_apX7gw&pp=0gcJCQwKAYcqIYzv" data-fancybox
+                      data-width="100%" data-height="100%">
                       <svg class="icon" width="48" height="54">
                         <use href="./images/sprite.svg#play"></use>
                       </svg>
                     </a>
                   </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-3">Q&A about UMMA LIFE</p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/EcosystemofUMMALife.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=iKJOvWggwjQ&t=1s" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-4">Ecosystem of UMMA Life</p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/SecurityInUMMALIFE.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=00v-_qFwGSg" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-5">Security in UMMA LIFE</p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/UMMALIFEonthepodcast.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=5Qmnws65EJ4&t=24s" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-6">UMMA LIFE on the podcast “После намаза”
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/EarningwithUMMATOKEN.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=C1IuoOb_1ag" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-7">Earning with UMMA TOKEN</p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="not-ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/hahalaExpo2023.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=XXykB90ZHAY" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-8">UMMA LIFE at Halal Expo 2023</p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="ar">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/TheDevelopmentandFutureofUMMALIFEARABIC.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=L4BcSVmXuFc&t=242s" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-1">The Development and Future of UMMA LIFE
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide media-slider__slide" data-show="ar" loading="lazy">
+                <div class="vedio-card">
+                  <img class="vedio-card__img" src="./images/media/EcosystemofUMMALifeARABIC.webp"
+                    alt="The Development and Future of UMMA LIFE">
+                  <div class="vedio-card__popup">
+                    <a class="vedio-card__link wow animate__animated animate__fadeIn" data-wow-delay=".3s"
+                      href="https://www.youtube.com/watch?v=6G_gKIFzaG8" data-fancybox data-width="100%"
+                      data-height="100%">
+                      <svg class="icon" width="48" height="54">
+                        <use href="./images/sprite.svg#play"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="media-slider__caption" data-i18n="media.caption-4">Ecosystem of UMMA Life</p>
                 </div>
               </div>
             </div>
-            <p class="media-slider__caption" data-i18n="media.caption">The future of the Muslim digital space</p>
             <div class="media-slider__controls ">
-              <div class="media-slider__btn media-slider__btn--prev swiper-button-disabled">
+              <button class="media-slider__btn media-slider__btn--prev swiper-button-disabled" type="button">
                 <svg class="icon" width="12" height="12">
                   <use href="./images/sprite.svg#arrow"></use>
                 </svg>
-              </div>
-              <div class="media-slider__btn media-slider__btn--next">
+                <span class="visually-hidden">
+                  Go to previous slide
+                </span>
+              </button>
+              <button class="media-slider__btn media-slider__btn--next" type="button">
                 <svg class="icon" width="12" height="12">
                   <use href="./images/sprite.svg#arrow"></use>
                 </svg>
+                <span class="visually-hidden">
+                  Go to next slide
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq" data-i18n-section="faq">
+      <div class="container">
+        <h2 class="faq__title title rellax" data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="faq.title">Faq
+        </h2>
+        <div class="faq__accordion rellax" data-rellax-percentage="0.5" data-rellax-speed="1">
+          <div class="faq__item" data-accordion>
+            <button class="faq__question" type="button">
+              <span class="faq__question-label" data-i18n="q1">What is Umma Life?</span>
+              <span class="faq__question-icon">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__answer" data-accordion-content>
+              <div class="faq__answer-txt" data-i18n="a1">
+                <p>
+                  Umma Life is a global social network for Muslims, built around truth, freedom of speech and community
+                  connection. It
+                  focuses on communication, learning and growth within the Ummah.
+                </p>
               </div>
             </div>
           </div>
+          <div class="faq__item" data-accordion>
+            <button class="faq__question" type="button">
+              <span class="faq__question-label" data-i18n="q2">What other projects are part of the Umma
+                ecosystem?</span>
+              <span class="faq__question-icon">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__answer" data-accordion-content>
+              <div class="faq__answer-txt" data-i18n="a2">
+                <p>
+                  The Umma ecosystem is a comprehensive set of platforms and projects designed to integrate finance,
+                  technology, and
+                  community. While the core focus is often on Umma Network, the ecosystem is expanding to include
+                  several key projects that build upon its decentralized foundation
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion>
+            <button class="faq__question" type="button">
+              <span class="faq__question-label" data-i18n="q3">Where is Isa Dagestani based?</span>
+              <span class="faq__question-icon">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__answer" data-accordion-content>
+              <div class="faq__answer-txt" data-i18n="a3">
+                <p>
+                  Dubai, UAE (a major hub for Islamic finance and crypto adoption).
+                </p>
+                <p>
+                  European or Asian technological centers.
+                </p>
+                <p>
+                  Virtual Presence: Crucially, the Umma ecosystem itself is a decentralized project. This means its core
+                  Umma Network
+                  infrastructure does not have a single physical headquarters. The project operates globally, driven by
+                  its
+                  community and
+                  smart contract
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion>
+            <button class="faq__question" type="button">
+              <span class="faq__question-label" data-i18n="q4">Does Isa personally invest in his projects?</span>
+              <span class="faq__question-icon">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__answer" data-accordion-content>
+              <div class="faq__answer-txt" data-i18n="a4">
+                <p>
+                  Yes, the principal individuals and founders behind the Umma ecosystem, including Isa Dagestani, are
+                  strongly committed
+                  to the long-term success of the projects and are known to be significant investors in them.
+                  Why Founder Investment Matters (Proof of Confidence):
+                  Strong Commitment (Skin in the Game): When founders personally invest, it signals deep confidence in
+                  the
+                  project's
+                  longevity and viability. This is a crucial factor for attracting other institutional investors and
+                  building community
+                  trust in the Umma ecosystem.
+                </p>
+                <p>
+                  Alignment with Community: By investing their own resources and Umma tokens, the founders' financial
+                  interests are
+                  directly aligned with the interests of the entire community and all token holders. Their success is
+                  tied
+                  to the
+                  platform's success.
+                </p>
+                <p>
+                  Long-Term Vision: Personal investment supports the project roadmap and helps ensure that strategic
+                  decisions are made
+                  with a focus on long-term growth and stability, rather than short-term gains.
+                </p>
+                <p>
+                  In the decentralized finance (DeFi) world, the personal involvement and investment of the leadership
+                  are
+                  vital trust
+                  signals that help validate the project's integrity and future potential.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion>
+            <button class="faq__question" type="button">
+              <span class="faq__question-label" data-i18n="q5">How can I contact Isa for collaboration or
+                partnership?</span>
+              <span class="faq__question-icon">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+              <span class="visually-hidden">
+                open/close the accordion
+              </span>
+            </button>
+            <div class="faq__answer" data-accordion-content>
+              <div class="faq__answer-txt" data-i18n="a5">
+                <p>
+                  For partnership inquiries, collaboration opportunities, or direct communication with the principal
+                  figures
+                  behind the
+                  Umma ecosystem, including Isa Dagestani, it is highly recommended to use the official communication
+                  channels established
+                  by the project.
+                </p>
+                <p>
+                  This ensures that your proposal is professionally reviewed by the appropriate team and documented
+                  through
+                  the correct
+                  channels.
+                  Recommended Contact Methods:
+                  Official Partnership Form: The most effective way is typically through the dedicated Partnership or
+                  Collaboration Form
+                  available on the main Umma website. This ensures all necessary details about your proposal are
+                  gathered
+                  upfront.
+                </p>
+                <p>
+                  Business Development Email: Use the official email address designated for business inquiries and
+                  partnerships (e.g.,
+                  partnerships@ummanetwork.io or bd@umma.finance). This is often monitored by the Business Development
+                  team.
+                </p>
+                <p>
+                  Official Social Channels: For general contact, you can reach out via official platforms like LinkedIn
+                  or
+                  Twitter (X),
+                  ensuring you message the official verified account of the Umma project or the founder (if publicly
+                  listed).
+                </p>
+                <p>
+                  Important Note: For security and verification purposes, avoid using unofficial personal emails or
+                  direct
+                  messages to
+                  unverified accounts. Always rely on the contact information explicitly provided on the official Umma
+                  ecosystem website
+                  or documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="faq" data-i18n-section="faq">
-    <div class="container">
-      <h2 class="faq__title title rellax" data-rellax-percentage="0.5"  data-rellax-speed="1" data-i18n="faq.title">Faq</h2>
-      <div class="faq__accordion rellax" data-rellax-percentage="0.5"  data-rellax-speed="1">
-        <div class="faq__item"  data-accordion>
-          <button class="faq__question" type="button">
-            <span class="faq__question-label" data-i18n="q1">What is Umma Life?</span>
-            <span class="faq__question-icon">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer" data-accordion-content>
-            <div class="faq__answer-txt" data-i18n="a1">
-              <p>
-                Umma Life is a global social network for Muslims, built around truth, freedom of speech and community connection. It
-                focuses on communication, learning and growth within the Ummah.
+    </section>
+  </main>
+  <footer class="footer" id="contact">
+    <div class="footer__wrapper">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__social-block">
+            <a class="logo wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"
+              href="./index.html">
+              <p class="logo__title" data-i18n="name.logo-first">Isa</p>
+              <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p>
+            </a>
+            <ul class="social-list" id="contact">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.instagram.com/isa_dagestani/" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" width="47" height="47">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                  <span class="visually-hidden">
+                    go to Isa Dagestani’s Instagram
+                  </span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://x.com/isa_dagestan" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" width="47" height="47">
+                    <use href="./images/sprite.svg#x"></use>
+                  </svg>
+                  <span class="visually-hidden">
+                    go to Isa Dagestani’s X profile
+                  </span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://t.me/isa_dagestan" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" width="47" height="47">
+                    <use href="./images/sprite.svg#telegram"></use>
+                  </svg>
+                  <span class="visually-hidden">
+                    go to Isa Dagestani’s Telegram
+                  </span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/isadagestani/" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" width="47" height="47">
+                    <use href="./images/sprite.svg#linkedIn"></use>
+                  </svg>
+                  <span class="visually-hidden">
+                    go to Isa Dagestani’s linkedin profile
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="footer__social-decr-box">
+              <p class="footer__social-decr" data-i18n="footer.social-desc-1">
+                Building meaningful digital products for a stronger global Ummah.
+              </p>
+              <p class="footer__social-decr" data-i18n="footer.social-desc-2">
+                Creating secure, scalable and purpose-driven technology for millions of users.
+              </p>
+              <p class="footer__social-decr" data-i18n="footer.social-desc-3">
+                Innovation with purpose. Impact at scale.
               </p>
             </div>
           </div>
-        </div>
-        <div class="faq__item"  data-accordion>
-          <button class="faq__question" type="button">
-            <span class="faq__question-label" data-i18n="q2">What other projects are part of the Umma ecosystem?</span>
-            <span class="faq__question-icon">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer" data-accordion-content>
-            <div class="faq__answer-txt" data-i18n="a2">
-              <p>
-                The Umma ecosystem is a comprehensive set of platforms and projects designed to integrate finance, technology, and
-                community. While the core focus is often on Umma Network, the ecosystem is expanding to include
-                several key projects that build upon its decentralized foundation
-              </p>
-            </div>
+          <div class="footer__hero-block">
+            <h2 class="footer__hero-title">
+              <span class="footer__hero-title-txt" data-i18n="footer.logo-first">Isa</span>
+              <span class="footer__hero-title-txt footer__hero-title-txt--style"
+                data-i18n="footer.logo-last">Dagestani</span>
+            </h2>
+            <picture>
+              <source srcset="./images/content/isaDagestani.webp 1x, ./images/content/isaDagestani-2x.webp 2x"
+                type="image/webp">
+              <source srcset="./images/content/isaDagestani.png 1x, ./images/content/isaDagestani-2x.png 2x"
+                type="image/png">
+              <img class="footer__hero-img" src="./images/content/isaDagestani.png" alt="Isa Dagestani" width="335"
+                height="452">
+            </picture>
           </div>
-        </div>
-        <div class="faq__item"  data-accordion>
-          <button class="faq__question" type="button">
-            <span class="faq__question-label" data-i18n="q3">Where is Isa Dagestani based?</span>
-            <span class="faq__question-icon">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer" data-accordion-content>
-            <div class="faq__answer-txt" data-i18n="a3">
-              <p>
-                Dubai, UAE (a major hub for Islamic finance and crypto adoption).
-              </p>
-              <p>
-                European or Asian technological centers.
-              </p>
-              <p>
-                Virtual Presence: Crucially, the Umma ecosystem itself is a decentralized project. This means its core Umma Network
-                infrastructure does not have a single physical headquarters. The project operates globally, driven by its community and
-                smart contract
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq__item"  data-accordion>
-          <button class="faq__question" type="button">
-            <span class="faq__question-label" data-i18n="q4">Does Isa personally invest in his projects?</span>
-            <span class="faq__question-icon">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer" data-accordion-content>
-            <div class="faq__answer-txt" data-i18n="a4">
-              <p>
-                Yes, the principal individuals and founders behind the Umma ecosystem, including Isa Dagestani, are strongly committed
-                to the long-term success of the projects and are known to be significant investors in them.
-                Why Founder Investment Matters (Proof of Confidence):
-                Strong Commitment (Skin in the Game): When founders personally invest, it signals deep confidence in the project's
-                longevity and viability. This is a crucial factor for attracting other institutional investors and building community
-                trust in the Umma ecosystem.
-              </p>
-              <p>
-                Alignment with Community: By investing their own resources and Umma tokens, the founders' financial interests are
-                directly aligned with the interests of the entire community and all token holders. Their success is tied to the
-                platform's success.
-              </p>
-              <p>
-                Long-Term Vision: Personal investment supports the project roadmap and helps ensure that strategic decisions are made
-                with a focus on long-term growth and stability, rather than short-term gains.
-              </p>
-              <p>
-                In the decentralized finance (DeFi) world, the personal involvement and investment of the leadership are vital trust
-                signals that help validate the project's integrity and future potential.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq__item"  data-accordion>
-          <button class="faq__question"  type="button">
-            <span class="faq__question-label" data-i18n="q5">How can I contact Isa for collaboration or partnership?</span>
-            <span class="faq__question-icon">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </button>
-          <div class="faq__answer" data-accordion-content>
-            <div class="faq__answer-txt" data-i18n="a5">
-              <p>
-                For partnership inquiries, collaboration opportunities, or direct communication with the principal figures behind the
-                Umma ecosystem, including Isa Dagestani, it is highly recommended to use the official communication channels established
-                by the project.
-              </p>
-              <p>
-                This ensures that your proposal is professionally reviewed by the appropriate team and documented through the correct
-                channels.
-                Recommended Contact Methods:
-                Official Partnership Form: The most effective way is typically through the dedicated Partnership or Collaboration Form
-                available on the main Umma website. This ensures all necessary details about your proposal are gathered upfront.
-              </p>
-              <p>
-                Business Development Email: Use the official email address designated for business inquiries and partnerships (e.g.,
-                partnerships@ummanetwork.io or bd@umma.finance). This is often monitored by the Business Development team.
-              </p>
-              <p>
-                Official Social Channels: For general contact, you can reach out via official platforms like LinkedIn or Twitter (X),
-                ensuring you message the official verified account of the Umma project or the founder (if publicly listed).
-              </p>
-              <p>
-                Important Note: For security and verification purposes, avoid using unofficial personal emails or direct messages to
-                unverified accounts. Always rely on the contact information explicitly provided on the official Umma ecosystem website
-                or documentation.
-              </p>
-            </div>
+          <div class="footer__nav-block">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".1s">
+                <a href="#about" class="footer__nav-link" data-i18n="footer.menu.about" data-scroll>About</a>
+              </li>
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".2s">
+                <a href="#projects" class="footer__nav-link" data-i18n="footer.menu.projects" data-scroll>Projects</a>
+              </li>
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".3s">
+                <a href="#media" class="footer__nav-link" data-i18n="footer.menu.media" data-scroll>Media</a>
+              </li>
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".4s">
+                <a href="#contact2" class="footer__nav-link" data-i18n="footer.menu.contact" data-scroll>Contact</a>
+              </li>
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".5s">
+                <a href="#" class="footer__nav-link" data-i18n="footer.menu.privacy">Privacy policy</a>
+              </li>
+              <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s"
+                data-wow-delay=".6s">
+                <a href="#" class="footer__nav-link" data-i18n="footer.menu.terms">Terms & Conditionals</a>
+              </li>
+            </ul>
+            <a class="contact-us" href="#contact2" data-scroll>
+              <p class="contact-us__title" data-i18n="footer.contact-btn">Свяжитесь с нами</p>
+              <span class="contact-us__img">
+                <svg class="icon" width="12" height="12">
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </div>
+      <h2 class="footer__bg-title" data-i18n="footer.bg-title">Isa Dagestani</h2>
     </div>
-  </section>
-</main>
-<footer class="footer" id="contact">
-  <div class="footer__wrapper">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__social-block">
-          <a class="logo wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" href="./index.html">
-           <p class="logo__title" data-i18n="name.logo-first">Isa</p>
-           <p class="logo__title logo__title--style" data-i18n="surname.logo-last">Dagestani</p> 
-          </a>
-          <ul class="social-list">
-            <li class="social-list__item wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-              <a class="social-list__link" href="https://www.instagram.com/isa_dagestani/" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" width="47" height="47">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-              <a class="social-list__link" href="https://x.com/isa_dagestan" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" width="47" height="47">
-                  <use href="./images/sprite.svg#x"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-              <a class="social-list__link" href="https://t.me/isa_dagestan" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" width="47" height="47">
-                  <use href="./images/sprite.svg#telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-              <a class="social-list__link" href="https://www.linkedin.com/in/isadagestani/" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" width="47" height="47">
-                  <use href="./images/sprite.svg#linkedIn"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <div class="footer__social-decr-box">
-            <p class="footer__social-decr wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" data-i18n="footer.social-desc-1">
-              Building meaningful digital products for a stronger global Ummah.
-            </p>
-            <p class="footer__social-decr wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" data-i18n="footer.social-desc-2">
-              Creating secure, scalable and purpose-driven technology for millions of users.
-            </p>
-            <p class="footer__social-decr wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".7s" data-i18n="footer.social-desc-3">
-              Innovation with purpose. Impact at scale.
-            </p>
-          </div>
-        </div>
-        <div class="footer__hero-block">
-          <h2 class="footer__hero-title" >
-            <span class="footer__hero-title-txt rellax"data-rellax-percentage="0.5" data-rellax-speed="1" data-i18n="footer.logo-first">Isa</span>
-            <span class="footer__hero-title-txt footer__hero-title-txt--style rellax"data-rellax-percentage="0.5" data-rellax-speed="1"  data-i18n="footer.logo-last">Dagestani</span>
-          </h2>
-          <picture>
-            <source srcset="./images/content/footer-hero.webp" type="image/webp">
-            <source srcset="./images/content/footer-hero.png 1x, ./images/content/footer-hero@x2.png 2x" type="image/png">
-            <img class="footer__hero-img" src="./images/content/footer-hero.webp" alt="Isa Dagestani" loading="lazy">
-          </picture>
-        </div>
-        <div class="footer__nav-block">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
-              <a href="#about" class="footer__nav-link" data-i18n="footer.menu.about" data-scroll>About</a>
-            </li>
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
-              <a href="#projects" class="footer__nav-link" data-i18n="footer.menu.projects" data-scroll>Projects</a>
-            </li>
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-              <a href="#media" class="footer__nav-link" data-i18n="footer.menu.media" data-scroll>Media</a>
-            </li>
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".4s">
-              <a href="#contact" class="footer__nav-link" data-i18n="footer.menu.contact" data-scroll>Contact</a>
-            </li>
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
-              <a href="#projects" class="footer__nav-link" data-i18n="footer.menu.privacy">Privacy policy</a>
-            </li>
-            <li class="footer__nav-item wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
-              <a href="#" class="footer__nav-link" data-i18n="footer.menu.terms">Terms & Conditionals</a>
-            </li>
-          </ul>
-          <a class="contact-us" href="#contact2" data-scroll>
-            <p class="contact-us__title" data-i18n="footer.contact-btn">Свяжитесь с нами</p>
-            <span class="contact-us__img">
-              <svg class="icon" width="12" height="12">
-                <use href="./images/sprite.svg#arrow"></use>
-              </svg>
-            </span>
-          </a>
-        </div>
-   
-      </div>
-    </div>
-    <h2 class="footer__bg-title" data-i18n="footer.bg-title">Isa Dagestani</h2>
-  </div>
-</footer>
+  </footer>
+
 
 
 
@@ -621,4 +983,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 </body>
+
 </html>

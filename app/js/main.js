@@ -1,5 +1,8 @@
+document.body.classList.add("loading");
 
-window.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('load',()=>{
+document.body.classList.remove("loading");
+document.body.classList.remove("loaded");
 
   // ===== MENU =====
   const MENUBTN = document.querySelector(".menu__btn");
@@ -12,13 +15,16 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
   });
   const openMenu=()=>{
+    //const header = document.querySelector('.header');
     MENU.classList.toggle('menu__nav--active');
     MENUBTN.classList.toggle('menu__btn--active');
+    header.classList.toggle('header--blur');
   }
   const closeMenu =()=>{
     document.body.classList.remove('lock');
     MENU.classList.remove('menu__nav--active');
     MENUBTN.classList.remove('menu__btn--active');
+    header.classList.remove('header--blur');
   }
   
 /* Скрол меню */
@@ -84,9 +90,9 @@ document.querySelectorAll('#hero, #about, #projects, #media, #contact').forEach(
 });
 
 /* При скроле меняется хедер */
+const header = document.querySelector('.header');
 let isScrolled = false;
 const headerScroll = () => {
-  const header = document.querySelector('.header');
   const headerHeght = header.offsetHeight;
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
@@ -129,31 +135,12 @@ function initSliders() {
       nextEl: '.media-slider__btn--next',
       prevEl: '.media-slider__btn--prev'
     },
-    on: {
-      slideChange() {
-        updateTabs(this.activeIndex);
-      }
-    }
   });
 }
 
 initSliders();
 
-  // табы
-  const tabs = document.querySelectorAll('.media-tabs__tab');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      let index = tab.dataset.index;
-      mediaSwiper.slideTo(index);
-    });
-  });
-
-  // обновление активного таба
-  const updateTabs =(activeIndex) => {
-    tabs.forEach(tab => tab.classList.remove('media-tabs__tab--active'));
-    tabs[activeIndex].classList.add('media-tabs__tab--active');
-  }
 
 
 
@@ -226,9 +213,31 @@ fetch("./lang/lang.json")
   
  setTimeout(() => {
     initSliders();
+    filterSlidesByLang();
   }, 50);
 }
 
+function filterSlidesByLang() {
+  const slides = document.querySelectorAll('.media-slider__slide');
+
+  slides.forEach(slide => {
+    const type = slide.dataset.show;
+
+
+    if (currentLang === "ar") {
+      // при арабском показываем только data-show="ar"
+      slide.style.display = (type === "ar") ? "" : "none";
+    } else {
+      // Если не ar тогда data-show="not-ar"
+      slide.style.display = (type !== "ar") ? "" : "none";
+    }
+  });
+
+  // нужно обновить Swiper после изменения видимости
+  setTimeout(() => {
+    mediaSwiper.update();
+  }, 50);
+}
 
 // Функция обновления всех текстов
 const updateContent = () => {
@@ -237,6 +246,15 @@ const updateContent = () => {
     if (translations[currentLang] && translations[currentLang][key]) {
       el.innerHTML = translations[currentLang][key];
     }
+  });
+
+   document.querySelectorAll("[data-i18n-link]").forEach(el => {
+    const key = el.dataset.i18nLink.split("."); // ["links", "download_google"]
+    let value = translations[currentLang];
+
+    key.forEach(k => value = value?.[k]);
+
+    if (value) el.href = value;
   });
 }
 
@@ -278,13 +296,5 @@ const updateContent = () => {
     vertical: true,
     horizontal: false
   });
-  const rellaxAbout = new Rellax('.rellax-projects', {
-    speed: -3,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
-   });
 
 });
