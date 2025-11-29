@@ -190,6 +190,7 @@
 }
 
 .about {
+  padding-top: 100px;
   padding-bottom: 130px;
   overflow: hidden;
 
@@ -1244,7 +1245,7 @@
   }
 
   .media {
-    padding: 100px 0;
+    padding: 100px 0 60px;
 
     .vedio-card {
       min-height: 357px;
@@ -1269,10 +1270,11 @@
 
       &__controls {
         margin-top: 20px;
-        padding-bottom: 5px;
-        padding-right: 5px;
       }
     }
+  }
+  .faq {
+    padding: 50px 0 100px;
   }
 
   .projects {
@@ -1300,6 +1302,7 @@
       &__list {
         gap: 30px;
         margin-bottom: 40px;
+        flex-wrap: wrap;
       }
 
       &__item {
@@ -1320,12 +1323,17 @@
       }
 
       .visit:hover~.visit-img {
-        width: 60%;
+        top: 40%;
+        width: 50%;
       }
     }
   }
 }
-
+@media (max-width: 528px) {
+.projects .projects-card .visit:hover~.visit-img {
+    top: 50%;
+  }
+}
 @media (max-width: 440px) {
   .hero {
     &__title {
@@ -1335,13 +1343,12 @@
 
   .projects .projects-card .visit:hover~.visit-img {
     width: 75%;
+    top: 45%;
   }
 
   .faq {
-    padding: 100px 0;
-
     &__question {
-      padding: 5px;
+      padding: 8px;
     }
 
     &__question-label {
@@ -1373,5 +1380,8 @@
   .projects .projects-card .visit:hover~.visit-img {
     width: 100%;
     left: 0;
+  }
+  .projects .projects-card__sub-title {
+    font-size: 16px;
   }
 }

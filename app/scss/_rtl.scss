@@ -68,7 +68,7 @@ html[dir="rtl"] {
       background-image: url('../images/content/card-bgc-rtl.png');
       background-position: 0 0;
       padding-left: 0;
-      padding-right: 30px;
+      padding-right: 0;
       &__img {
         right: auto;
         left: 0;
@@ -118,6 +118,7 @@ html[dir="rtl"] {
         margin-left: 0;
         margin-right: auto;
         margin-top: 30px;
+        gap: 15px;
       }
     }
   }
@@ -144,7 +145,8 @@ html[dir="rtl"] {
       &__controls {
         margin-left: 0;
         margin-right: auto;
-        flex-direction: row-reverse
+        flex-direction: row-reverse;
+        gap: 15px;
       }
     }
   }
@@ -172,6 +174,10 @@ html[dir="rtl"] {
         right: auto;
         left: 0;
       }
+    }
+    .projects-card .visit:hover~.visit-img {
+      left: auto;
+      right: 25px;
     }
   }
 
@@ -329,17 +335,45 @@ html[dir="rtl"] {
       .lang {
         &__item {
           &::after {
-            right: 18px;
+            right: 16px;
           }
       
           &::before {
-            left: 18px;
+            left: 16px;
           }
         }
       }
     }
     .media::before {
       right: 0;
+    }
+  }
+  @media (max-width: 528px) {
+    .projects {
+      .projects-card__list {
+        gap: 20px;
+      }
+      .projects-card .visit:hover~.visit-img {
+        top: 40%;
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    .projects {
+      .projects-card__list {
+        gap: 30px;
+      }
+      .projects-card .visit:hover~.visit-img {
+        top: 45%;
+      }
+    }
+  }
+  @media (max-width: 385px) {
+    .projects {
+      .projects-card .visit:hover~.visit-img {
+        top: 40%;
+        right: 0;
+      }
     }
   }
 }

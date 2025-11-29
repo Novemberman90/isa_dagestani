@@ -18,13 +18,18 @@ document.body.classList.remove("loaded");
     //const header = document.querySelector('.header');
     MENU.classList.toggle('menu__nav--active');
     MENUBTN.classList.toggle('menu__btn--active');
-    header.classList.toggle('header--blur');
+
+    if(header.classList.contains('header--blur')) {
+      header.classList.remove('header--blur');
+    } else {
+      header.classList.add('header--blur');
+    }
   }
   const closeMenu =()=>{
     document.body.classList.remove('lock');
     MENU.classList.remove('menu__nav--active');
     MENUBTN.classList.remove('menu__btn--active');
-    header.classList.remove('header--blur');
+    header.classList.add('header--blur');
   }
   
 /* Скрол меню */
@@ -92,6 +97,7 @@ document.querySelectorAll('#hero, #about, #projects, #media, #contact').forEach(
 /* При скроле меняется хедер */
 const header = document.querySelector('.header');
 let isScrolled = false;
+
 const headerScroll = () => {
   const headerHeght = header.offsetHeight;
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
