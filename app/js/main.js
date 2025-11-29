@@ -14,22 +14,15 @@ document.body.classList.remove("loaded");
       document.body.classList.toggle('lock');
     }
   });
+
   const openMenu=()=>{
-    //const header = document.querySelector('.header');
     MENU.classList.toggle('menu__nav--active');
     MENUBTN.classList.toggle('menu__btn--active');
-
-    if(header.classList.contains('header--blur')) {
-      header.classList.remove('header--blur');
-    } else {
-      header.classList.add('header--blur');
-    }
   }
   const closeMenu =()=>{
     document.body.classList.remove('lock');
     MENU.classList.remove('menu__nav--active');
     MENUBTN.classList.remove('menu__btn--active');
-    header.classList.add('header--blur');
   }
   
 /* Скрол меню */
@@ -98,11 +91,12 @@ document.querySelectorAll('#hero, #about, #projects, #media, #contact').forEach(
 const header = document.querySelector('.header');
 let isScrolled = false;
 
+
+
 const headerScroll = () => {
   const headerHeght = header.offsetHeight;
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-
+  
     if (scrollPosition >= headerHeght && !isScrolled) {
     isScrolled = true;
     header.classList.add('header--blur')

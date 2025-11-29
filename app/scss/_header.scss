@@ -12,8 +12,7 @@
   &--blur {
     padding-top: 20px;
     padding-bottom: 20px;
-    backdrop-filter: blur(30px);
-    background-color: rgba($color: $dark-700, $alpha: 0.3);
+    background-color: $dark-hero;
   }
 
   &__inner {
