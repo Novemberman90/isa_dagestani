@@ -67,8 +67,6 @@ html[dir="rtl"] {
     .card {
       background-image: url('../images/content/card-bgc-rtl.png');
       background-position: 0 0;
-      padding-left: 0;
-      padding-right: 0;
       &__img {
         right: auto;
         left: 0;
